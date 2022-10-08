@@ -8,16 +8,16 @@
 </script>
 
 <article class="card">
-	<img src={url} alt={name} />
 	<a sveltekit:prefetch href={`/projects/${slug}`}>
+		<img src={url} alt={name} />
 		<div class="hover">
-			<h3 class="title">
+			<h4 class="title">
 				{name}
-			</h3>
+			</h4>
 			<div class="description">
 				<p>{@html marked(description.slice(0, 100))}</p>
-				<div class="pill">Show More</div>
 			</div>
+			<div class="pill">Show More</div>
 		</div>
 	</a>
 </article>
@@ -29,8 +29,13 @@
 		border: var(--radius) solid var(--accent);
 		padding: var(--space-m);
 		background-color: var(--surface2-light);
-		max-width: 42rem;
+		max-width: 32rem;
+		max-height: 32rem;
+		overflow: hidden;
 
+		& .hover .description {
+			color: var(--text2-light);
+		}
 		& > a {
 			text-decoration: none;
 
@@ -41,29 +46,22 @@
 
 		&:hover {
 			box-shadow: 0px 0px 20px var(--accent);
+			cursor: pointer;
+			max-height: fit-content;
 
 			.pill {
 				background-color: var(--accent);
 				color: var(--surface2-light);
 			}
 		}
-		&:hover h3 {
+		&:hover h4 {
 			transform: scale(1.01) translateY(-10%);
-		}
-		h3:hover {
-			--_p: 0%;
 		}
 
 		.pill {
 			color: var(--ink);
 			// transition-property: color;
 			// transition-duration: 0.5s;
-		}
-		.more {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
 		}
 	}
 </style>

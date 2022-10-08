@@ -174,11 +174,4 @@
 			}
 		}
 	}
-	.logo {
-		width: 75px;
-		height: 75px;
-		display: grid;
-		place-items: start;
-		font-weight: 600;
-	}
 </style>
