@@ -3,11 +3,15 @@
 :where(h1, h2, h3, h4, h5, h6) {
   //margin: 4.5rem 0 1rem;
   margin-top: var(--space-xl);
-  line-height: 1.1;
+  line-height: 1;
   font-family: var(--headingFont);
   font-weight: 700;
   
   color: var(--text1-light);
+
+  &:hover {
+    text-decoration: underline var(--accent);
+  }
 }
 
 h1 {
@@ -16,16 +20,6 @@ h1 {
   position: relative;
   overflow: visible;
   padding-bottom: 1rem;
-
-  &::after {
-    content: '';
-    height: 0.1em;
-    background: var(--accent);
-    width: 100%;
-    margin-left: -100%;
-    position: absolute;
-    bottom: 0;
-  }
 }
 
 h2 {

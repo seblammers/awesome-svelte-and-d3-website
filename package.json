@@ -23,6 +23,8 @@
 		"prettier-plugin-svelte": "^2.7.0",
 		"sass": "^1.55.0",
 		"svelte": "^3.44.0",
+		"svelte-hamburgers": "^4.0.1",
+		"svelte-mount": "^1.0.2",
 		"svelte-preprocess": "^4.10.7",
 		"vite": "^3.1.0"
 	},

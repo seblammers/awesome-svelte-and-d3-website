@@ -19,10 +19,6 @@
     --surface-shadow-light: var(--hue) 10% calc(var(--lightness) / 5);
     --shadow-strength-light: .02;
 
-    --brandBlue: hsl(var(--blue-hue) var(--saturation) 31%);
-    --brandTeal: hsl(var(--teal-hue) 35% 70%);
-    --brandRed: hsl(var(--red-hue) var(--saturation) 40%);
-    
     --primary: var(--text1-light);
     --emphasis: var(--text2-light);
     --dark: var(--text1-light);
@@ -89,7 +85,7 @@
     --tracking-s: -0.075ch;
     --grid-min-item-size: clamp(16rem,50vw,26rem);
     
-    // Fonts
+    // TODO: Fonts
     --primaryFont: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
     --accentFont: -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
     --headingFont: -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
