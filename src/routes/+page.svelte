@@ -2,6 +2,8 @@
 	import { getContextClient, gql, queryStore } from '@urql/svelte';
 	import ProjectCard from '$lib/components/Card.svelte';
 
+	export let data;
+
 	const projectsQueryStore = queryStore({
 		client: getContextClient(),
 		query: gql`
