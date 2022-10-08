@@ -1,5 +1,6 @@
 <script>
 	import '$lib/styles/global.scss';
+	import Nav from '$lib/components/Nav.svelte';
 	import { createClient, setContextClient } from '@urql/svelte';
 
 	const client = createClient({
@@ -7,8 +8,16 @@
 	});
 
 	setContextClient(client);
+
+	export let data;
 </script>
 
-<main class="flow">
-	<slot />
-</main>
+<div class="layout">
+	<Nav />
+
+	{#key data.currentRoute}
+		<main class="flow">
+			<slot />
+		</main>
+	{/key}
+</div>
