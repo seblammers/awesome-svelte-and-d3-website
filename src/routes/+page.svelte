@@ -40,7 +40,14 @@
 		<p>Oopsie! {$projectsQueryStore.error.message}</p>
 	{:else}
 		{#each $projectsQueryStore.data.projects as p}
-			<ProjectCard name={p.name} description={p.description} url={p.image[0].url} slug={p.slug} />
+			<ProjectCard
+				name={p.name}
+				description={p.description}
+				url={p.image[0].url}
+				slug={p.slug}
+				demo={p.demo}
+				sourceCode={p.sourceCode}
+			/>
 		{/each}
 	{/if}
 </div>
