@@ -2,6 +2,7 @@
 	import '@fontsource/clear-sans';
 	import '$lib/styles/global.scss';
 	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import { createClient, setContextClient } from '@urql/svelte';
 
 	const client = createClient({
@@ -21,4 +22,6 @@
 			<slot />
 		</main>
 	{/key}
+
+	<Footer />
 </div>

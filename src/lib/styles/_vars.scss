@@ -16,6 +16,7 @@
     --hue: var(--blue-hue);
     --text1-light: hsl(var(--hue) var(--saturation) 10%);
     --text2-light: hsl(var(--hue) 30% 30%);
+    --text1-dark: whitesmoke;
     --surface-shadow-light: var(--hue) 10% calc(var(--lightness) / 5);
     --shadow-strength-light: .02;
 
