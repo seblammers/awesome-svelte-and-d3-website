@@ -85,10 +85,10 @@
     --tracking-s: -0.075ch;
     --grid-min-item-size: clamp(16rem,50vw,26rem);
     
-    // TODO: Fonts
+    // WIP: Clear Sans
     --primaryFont: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
-    --accentFont: -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
-    --headingFont: -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
+    --accentFont: "Clear Sans", -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
+    --headingFont: "Clear Sans", -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
     --codeFont: "Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", monospace; 
   
     // Base styles

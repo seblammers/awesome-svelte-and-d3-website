@@ -1,4 +1,5 @@
 <script>
+	import '@fontsource/clear-sans';
 	import '$lib/styles/global.scss';
 	import Nav from '$lib/components/Nav.svelte';
 	import { createClient, setContextClient } from '@urql/svelte';

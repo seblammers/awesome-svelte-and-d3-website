@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/clear-sans": "^4.5.3",
 		"urql": "^3.0.3"
 	}
 }
