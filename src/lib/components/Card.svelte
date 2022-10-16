@@ -2,6 +2,7 @@
 	import { marked } from 'marked';
 	export let url = '';
 	export let name = '';
+	export let authors = '';
 	export let slug = '';
 	export let index = ''; // TODO use index to sort by server-side order
 	export let alt = ''; // TODO add alt text for images
@@ -10,14 +11,21 @@
 	export let sourceCode = '';
 	export let summary = 'Tap to show details';
 	// TODO: open more info about each project in a modal via https://svelte.dev/repl/629f732d77fb48f79826b58b6ec4137f?version=3.37.0 ?
+
+	// TODO: add "&" before last author (and between 1 & 2 if only 2?)
+	if (authors.length > 1) {
+		authors = authors.join(', ');
+	}
 </script>
 
 <article class="card">
 	<!-- <a sveltekit:prefetch href={`/projects/${slug}`}> -->
-	<h4 class="title">
+	<strong class="title">
 		{name}
-	</h4>
+	</strong>
 	<img src={url} alt={name} />
+	<p class="authors">by {authors}</p>
+
 	<!-- </a> -->
 	<details class="accordion">
 		<summary>
@@ -45,6 +53,9 @@
 		// max-height: 32rem;
 		overflow: hidden;
 
+		& > .authors {
+			font-size: var(--step-0);
+		}
 		& > a {
 			text-decoration: none;
 
