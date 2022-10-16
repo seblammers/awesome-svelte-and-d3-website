@@ -26,8 +26,8 @@
 
 		<div class="details">
 			<p>{@html marked(description.slice(0, 100))}</p>
-			<a class="pill" href={demo}>Live Site</a>
-			<a class="pill" href={sourceCode}>Source Code</a>
+			<a class="pill" target="_blank" rel="noopener noreferrer" href={demo}>Live Site</a>
+			<a class="pill" target="_blank" rel="noopener noreferrer" href={sourceCode}>Source Code</a>
 		</div>
 	</details>
 </article>
