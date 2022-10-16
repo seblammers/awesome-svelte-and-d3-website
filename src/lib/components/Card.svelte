@@ -9,25 +9,27 @@
 	export let demo = '';
 	export let sourceCode = '';
 	export let summary = 'Tap to show details';
+	// TODO: open more info about each project in a modal via https://svelte.dev/repl/629f732d77fb48f79826b58b6ec4137f?version=3.37.0 ?
 </script>
 
 <article class="card">
-	<a sveltekit:prefetch href={`/projects/${slug}`}>
-		<img src={url} alt={name} />
-
-		<h4 class="title">
-			{name}
-		</h4>
-	</a>
+	<!-- <a sveltekit:prefetch href={`/projects/${slug}`}> -->
+	<h4 class="title">
+		{name}
+	</h4>
+	<img src={url} alt={name} />
+	<!-- </a> -->
 	<details class="accordion">
 		<summary>
 			<b>{summary}</b>
 		</summary>
 
 		<div class="details">
-			<p>{@html marked(description.slice(0, 100))}</p>
-			<a class="pill" target="_blank" rel="noopener noreferrer" href={demo}>Live Site</a>
-			<a class="pill" target="_blank" rel="noopener noreferrer" href={sourceCode}>Source Code</a>
+			<p>{@html marked(description)}</p>
+			<a class="pill" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
+			<a class="pill" target="_blank" rel="noopener noreferrer" href={sourceCode}
+				>Source Code &nearr;</a
+			>
 		</div>
 	</details>
 </article>
@@ -43,9 +45,6 @@
 		// max-height: 32rem;
 		overflow: hidden;
 
-		& .hover .description {
-			color: var(--text2-light);
-		}
 		& > a {
 			text-decoration: none;
 
