@@ -46,7 +46,7 @@
 	<nav in:fade>
 		<div class="nav-fh">
 			<a href="/">
-				<div class="logo" in:fly={{ y: -20, duration: 750, delay: 100 }}>
+				<div class="logo">
 					<img
 						src="/favicon.png"
 						alt="favicon showing a heart, the logo of Svelte and the logo of D3."
