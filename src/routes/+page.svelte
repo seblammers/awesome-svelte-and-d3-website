@@ -10,6 +10,7 @@
 			{
 				projects {
 					name
+					authors
 					slug
 					description
 					tags
@@ -42,6 +43,7 @@
 		{#each $projectsQueryStore.data.projects as p}
 			<ProjectCard
 				name={p.name}
+				authors={p.authors}
 				description={p.description}
 				url={p.image[0].url}
 				slug={p.slug}
