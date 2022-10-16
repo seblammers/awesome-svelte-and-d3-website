@@ -31,7 +31,7 @@
 <h1>Welcome to Awesome Svelte & D3</h1>
 
 <h2>In the wild</h2>
-<p>A growing list of awesome Projects:</p>
+<p>A curated list of awesome Projects:</p>
 
 <div class="container projects">
 	{#if $projectsQueryStore.fetching}

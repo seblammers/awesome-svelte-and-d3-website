@@ -45,6 +45,14 @@
 <div class="wrapper" class:open class:scroll>
 	<nav in:fade>
 		<div class="nav-fh">
+			<a href="/">
+				<div class="logo" in:fly={{ y: -20, duration: 750, delay: 100 }}>
+					<img
+						src="/favicon.png"
+						alt="favicon showing a heart, the logo of Svelte and the logo of D3."
+					/>
+				</div>
+			</a>
 			<div class="hamburger">
 				<Hamburger --color="var(--text1-light)" type="vortex" bind:open />
 			</div>
