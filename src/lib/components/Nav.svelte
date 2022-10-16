@@ -1,28 +1,11 @@
 <script>
+	import { navItems } from '$lib/config';
 	import { slide, fade, fly } from 'svelte/transition';
 	import { beforeNavigate } from '$app/navigation';
 	import { navigating, page } from '$app/stores';
 	import { Hamburger } from 'svelte-hamburgers';
 	import { mounted } from 'svelte-mount';
 
-	let navItems = [
-		{
-			title: 'Home',
-			route: '/'
-		},
-		{
-			title: 'Projects',
-			route: '/projects'
-		},
-		{
-			title: 'Learning',
-			route: '/learning'
-		},
-		{
-			title: 'About',
-			route: '/about'
-		}
-	];
 	let width;
 	let scrollY;
 
