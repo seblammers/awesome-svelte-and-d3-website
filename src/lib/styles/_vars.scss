@@ -1,98 +1,105 @@
 :root {
-  
-    --blue-hue: 236;
-    --orange-hue: 34;
-    --saturation: 24%;
-    --lightness: 50%;
-    
-    // orange for accents and surfaces
-    --brand: hsl(var(--orange-hue) var(--saturation) 90%);
-    --surface1-light: hsl(var(--orange-hue) calc(var(--saturation) - 10) 90%);
-    --surface2-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 99%);
-    --surface3-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 92%);
-    --surface4-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 85%);
+	--blue-hue: 236;
+	--orange-hue: 34;
+	--saturation: 24%;
+	--lightness: 50%;
 
-    // blue based colours for texts and shadows
-    --hue: var(--blue-hue);
-    --text1-light: hsl(var(--hue) var(--saturation) 10%);
-    --text2-light: hsl(var(--hue) 30% 30%);
-    --text1-dark: whitesmoke;
-    --surface-shadow-light: var(--hue) 10% calc(var(--lightness) / 5);
-    --shadow-strength-light: .02;
+	// orange for accents and surfaces
+	--brand: hsl(var(--orange-hue) var(--saturation) 90%);
+	--surface1-light: hsl(var(--orange-hue) calc(var(--saturation) - 10) 90%);
+	--surface2-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 99%);
+	--surface3-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 92%);
+	--surface4-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 85%);
 
-    --primary: var(--text1-light);
-    --emphasis: var(--text2-light);
-    --dark: var(--text1-light);
+	// blue based colours for texts and shadows
+	--hue: var(--blue-hue);
+	--text1-light: hsl(var(--hue) var(--saturation) 10%);
+	--text2-light: hsl(var(--hue) 30% 30%);
+	--text1-dark: whitesmoke;
+	--surface-shadow-light: var(--hue) 10% calc(var(--lightness) / 5);
+	--shadow-strength-light: 0.02;
 
-    --accent: var(--brand);
-    --background: var(--surface1-light);
-    --background-nav: var(--surface4-light);
-    --ink: var(--primary);
-    --paper: var(--background);
+	--primary: var(--text1-light);
+	--emphasis: var(--text2-light);
+	--dark: var(--text1-light);
 
-    --radius: 0.1em;
-    --max-width: 60rem;
+	--accent: var(--brand);
+	--background: var(--surface1-light);
+	--background-nav: var(--surface4-light);
+	--ink: var(--primary);
+	--paper: var(--background);
 
-    // utopia for the win
-    // text sizes
-    /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1350,20,1.414,8,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+	--radius: 0.1em;
+	--max-width: 60rem;
 
-    --step-custom: 3rem;
-    --step--1: clamp(0.83rem, calc(0.82rem + 0.08vw), 0.88rem);
-    --step-0: clamp(1.00rem, calc(0.92rem + 0.39vw), 1.25rem);
-    --step-1: clamp(1.20rem, calc(1.02rem + 0.88vw), 1.77rem);
-    --step-2: clamp(1.44rem, calc(1.11rem + 1.65vw), 2.50rem);
-    --step-3: clamp(1.73rem, calc(1.17rem + 2.80vw), 3.53rem);
-    --step-4: clamp(2.07rem, calc(1.17rem + 4.54vw), 5.00rem);
-    --step-5: clamp(2.49rem, calc(1.07rem + 7.11vw), 7.07rem);
-    --step-6: clamp(2.99rem, calc(0.81rem + 10.88vw), 9.99rem);
-    --step-7: clamp(3.58rem, calc(0.31rem + 16.38vw), 14.13rem);
-    --step-8: clamp(4.30rem, calc(-0.57rem + 24.35vw), 19.98rem);
+	// custom colours for navbar
 
-    // space sizes
-    /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1350,20,1.414,8,1,&s=0.75|0.5|0.25,2|3|5|8|13,s-l */
+	--selected-item: #fc0d1d;
 
-    --space-3xs: clamp(0.25rem, calc(0.23rem + 0.10vw), 0.31rem);
-    --space-2xs: clamp(0.50rem, calc(0.46rem + 0.19vw), 0.63rem);
-    --space-xs: clamp(0.75rem, calc(0.69rem + 0.29vw), 0.94rem);
-    --space-s: clamp(1.00rem, calc(0.92rem + 0.39vw), 1.25rem);
-    --space-m: clamp(2.00rem, calc(1.84rem + 0.78vw), 2.50rem);
-    --space-l: clamp(3.00rem, calc(2.77rem + 1.17vw), 3.75rem);
-    --space-xl: clamp(5.00rem, calc(4.61rem + 1.94vw), 6.25rem);
-    --space-2xl: clamp(8.00rem, calc(7.38rem + 3.11vw), 10.00rem);
-    --space-3xl: clamp(13.00rem, calc(11.99rem + 5.05vw), 16.25rem);
-  
-    /* One-up pairs */
-    --space-3xs-2xs: clamp(0.25rem, calc(0.13rem + 0.58vw), 0.63rem);
-    --space-2xs-xs: clamp(0.50rem, calc(0.36rem + 0.68vw), 0.94rem);
-    --space-xs-s: clamp(0.75rem, calc(0.59rem + 0.78vw), 1.25rem);
-    --space-s-m: clamp(1.00rem, calc(0.53rem + 2.33vw), 2.50rem);
-    --space-m-l: clamp(2.00rem, calc(1.46rem + 2.72vw), 3.75rem);
-    --space-l-xl: clamp(3.00rem, calc(1.99rem + 5.05vw), 6.25rem);
-    --space-xl-2xl: clamp(5.00rem, calc(3.45rem + 7.77vw), 10.00rem);
-    --space-2xl-3xl: clamp(8.00rem, calc(5.44rem + 12.82vw), 16.25rem);
-  
-    /* Custom pairs */
-    --space-s-l: clamp(1.00rem, calc(0.15rem + 4.27vw), 3.75rem);
-  
-    // some additional vars inspired by Andy Bell's Build-Excellent-Websites
-    --gutter: var(--space-s-m);
-    --border-radius: var(--step-1);
-    --transition-base: 250ms ease;
-    --transition-movement: 200ms linear;
-    --transition-fade: 200ms ease;
-    --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
-    --tracking: -0.05ch;
-    --tracking-s: -0.075ch;
-    --grid-min-item-size: clamp(16rem,50vw,26rem);
-    
-    // WIP: Clear Sans
-    --primaryFont: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
-    --accentFont: "Clear Sans", -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
-    --headingFont: "Clear Sans", -apple-system, BlinkMacSystemFont, "avenir next", "avenir", "segoe ui", "helvetica neue", helvetica, "Cantarell", "Ubuntu", "roboto", "noto", "arial", sans-serif; 
-    --codeFont: "Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", monospace; 
-  
-    // Base styles
-    font-size: 1rem;
-    line-height: 1.6;
+	// utopia for the win
+	// text sizes
+	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1350,20,1.414,8,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+	--step-custom: 3rem;
+	--step--1: clamp(0.83rem, calc(0.82rem + 0.08vw), 0.88rem);
+	--step-0: clamp(1rem, calc(0.92rem + 0.39vw), 1.25rem);
+	--step-1: clamp(1.2rem, calc(1.02rem + 0.88vw), 1.77rem);
+	--step-2: clamp(1.44rem, calc(1.11rem + 1.65vw), 2.5rem);
+	--step-3: clamp(1.73rem, calc(1.17rem + 2.8vw), 3.53rem);
+	--step-4: clamp(2.07rem, calc(1.17rem + 4.54vw), 5rem);
+	--step-5: clamp(2.49rem, calc(1.07rem + 7.11vw), 7.07rem);
+	--step-6: clamp(2.99rem, calc(0.81rem + 10.88vw), 9.99rem);
+	--step-7: clamp(3.58rem, calc(0.31rem + 16.38vw), 14.13rem);
+	--step-8: clamp(4.3rem, calc(-0.57rem + 24.35vw), 19.98rem);
+
+	// space sizes
+	/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1350,20,1.414,8,1,&s=0.75|0.5|0.25,2|3|5|8|13,s-l */
+
+	--space-3xs: clamp(0.25rem, calc(0.23rem + 0.1vw), 0.31rem);
+	--space-2xs: clamp(0.5rem, calc(0.46rem + 0.19vw), 0.63rem);
+	--space-xs: clamp(0.75rem, calc(0.69rem + 0.29vw), 0.94rem);
+	--space-s: clamp(1rem, calc(0.92rem + 0.39vw), 1.25rem);
+	--space-m: clamp(2rem, calc(1.84rem + 0.78vw), 2.5rem);
+	--space-l: clamp(3rem, calc(2.77rem + 1.17vw), 3.75rem);
+	--space-xl: clamp(5rem, calc(4.61rem + 1.94vw), 6.25rem);
+	--space-2xl: clamp(8rem, calc(7.38rem + 3.11vw), 10rem);
+	--space-3xl: clamp(13rem, calc(11.99rem + 5.05vw), 16.25rem);
+
+	/* One-up pairs */
+	--space-3xs-2xs: clamp(0.25rem, calc(0.13rem + 0.58vw), 0.63rem);
+	--space-2xs-xs: clamp(0.5rem, calc(0.36rem + 0.68vw), 0.94rem);
+	--space-xs-s: clamp(0.75rem, calc(0.59rem + 0.78vw), 1.25rem);
+	--space-s-m: clamp(1rem, calc(0.53rem + 2.33vw), 2.5rem);
+	--space-m-l: clamp(2rem, calc(1.46rem + 2.72vw), 3.75rem);
+	--space-l-xl: clamp(3rem, calc(1.99rem + 5.05vw), 6.25rem);
+	--space-xl-2xl: clamp(5rem, calc(3.45rem + 7.77vw), 10rem);
+	--space-2xl-3xl: clamp(8rem, calc(5.44rem + 12.82vw), 16.25rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1rem, calc(0.15rem + 4.27vw), 3.75rem);
+
+	// some additional vars inspired by Andy Bell's Build-Excellent-Websites
+	--gutter: var(--space-s-m);
+	--border-radius: var(--step-1);
+	--transition-base: 250ms ease;
+	--transition-movement: 200ms linear;
+	--transition-fade: 200ms ease;
+	--transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+	--tracking: -0.05ch;
+	--tracking-s: -0.075ch;
+	--grid-min-item-size: clamp(16rem, 50vw, 26rem);
+
+	// WIP: Clear Sans
+	--primaryFont: 'Iowan Old Style', 'Apple Garamond', 'Baskerville', 'Times New Roman',
+		'Droid Serif', 'Times', 'Source Serif Pro', serif;
+	--accentFont: 'Clear Sans', -apple-system, BlinkMacSystemFont, 'avenir next', 'avenir', 'segoe ui',
+		'helvetica neue', helvetica, 'Cantarell', 'Ubuntu', 'roboto', 'noto', 'arial', sans-serif;
+	--headingFont: 'Clear Sans', -apple-system, BlinkMacSystemFont, 'avenir next', 'avenir',
+		'segoe ui', 'helvetica neue', helvetica, 'Cantarell', 'Ubuntu', 'roboto', 'noto', 'arial',
+		sans-serif;
+	--codeFont: 'Menlo', 'Consolas', 'Monaco', 'Liberation Mono', 'Lucida Console', monospace;
+
+	// Base styles
+	font-size: 1rem;
+	line-height: 1.6;
 }

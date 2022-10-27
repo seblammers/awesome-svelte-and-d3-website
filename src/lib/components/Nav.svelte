@@ -152,7 +152,8 @@
 			color: var(--text1-light);
 			text-decoration: none;
 			&.active {
-				border-color: var(--accent);
+				// border-color: var(--accent);
+				border-color: var(--selected-item);
 			}
 			&:hover,
 			&:focus {
