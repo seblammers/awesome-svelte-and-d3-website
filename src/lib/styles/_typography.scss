@@ -1,110 +1,110 @@
 @use './vars';
 
 :where(h1, h2, h3, h4, h5, h6) {
-  //margin: 4.5rem 0 1rem;
-  margin-top: var(--space-xl);
-  line-height: 1;
-  font-family: var(--headingFont);
-  font-weight: 700;
-  
-  color: var(--text1-light);
+	//margin: 4.5rem 0 1rem;
+	margin-top: var(--space-xl);
+	line-height: 1;
+	font-family: var(--headingFont);
+	font-weight: 700;
 
-  &:hover {
-    text-decoration: underline var(--accent);
-  }
+	color: var(--text1-light);
+
+	// &:hover {
+	// 	text-decoration: underline var(--accent);
+	// }
 }
 
 h1 {
-  font-size: var(--step-5);
-  margin: 0 0 3rem;
-  position: relative;
-  overflow: visible;
-  padding-bottom: 1rem;
+	font-size: var(--step-4);
+	margin: 0 0 3rem;
+	position: relative;
+	overflow: visible;
+	padding-bottom: 1rem;
 }
 
 h2 {
-  font-size: var(--step-4);
-  }
-
-h3 {
-  font-size: var(--step-3);
+	font-size: var(--step-3);
 }
 
-h4, h5, h6 {
-  font-size: var(--step-2);
+h3 {
+	font-size: var(--step-2);
+}
+
+h4,
+h5,
+h6 {
+	font-size: var(--step-1);
 }
 
 /* Set line lengths */
 p,
 li,
 blockquote:not([class]) {
-  max-width: var(--max-width);
+	max-width: var(--max-width);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  max-width: 40ch;
+	max-width: 40ch;
 
-  & > a {
-    color: currentColor;
-    text-decoration: none;
+	& > a {
+		color: currentColor;
+		text-decoration: none;
 
-    &:hover {
-      color: var(--dark);
-    }
-  }
+		&:hover {
+			color: var(--dark);
+		}
+	}
 }
 
-
 p > a {
-  color: var(--dark);
-  color: currentColor;
-  text-decoration-color: var(--dark);
-  text-underline-offset: 1px;
+	color: var(--dark);
+	color: currentColor;
+	text-decoration-color: var(--dark);
+	text-underline-offset: 1px;
 
-  &:hover {
-    color: var(--surface2-light);
-    background-color: var(--accent);
-    text-decoration-color: var(--surface2-light);
-  }
+	&:hover {
+		color: var(--surface2-light);
+		background-color: var(--accent);
+		text-decoration-color: var(--surface2-light);
+	}
 }
 
 ul {
-  list-style-type: square;
-  padding-left: var(--space-m);
+	list-style-type: square;
+	padding-left: var(--space-m);
 
-  ul {
-    list-style-type: square;
-  }
+	ul {
+		list-style-type: square;
+	}
 
-  ::marker {
-    color: var(--accent);
-  }
+	::marker {
+		color: var(--accent);
+	}
 }
 
 ol {
+	list-style-type: none;
+	counter-reset: ordered;
+	margin-left: 20px;
 
-  list-style-type: none;
-  counter-reset: ordered;
-  margin-left: 20px;
+	li {
+		margin-bottom: var(--space-m);
 
-  li {
-    margin-bottom: var(--space-m);
-
-    &::before {
-      border-bottom: calc(var(--space-3xs) / 1.5) solid var(--accent);
-      // border-radius: .5rem;
-      color: var(--ink);
-      content: counter(ordered) ".";
-      counter-increment: ordered;
-      display: inline-block;
-      font-weight: 500;
-      margin-left: -50px;
-      margin-top: -7px;
-      padding: 5px 5px;
-      position: absolute;
-    }
-  }
+		&::before {
+			border-bottom: calc(var(--space-3xs) / 1.5) solid var(--accent);
+			// border-radius: .5rem;
+			color: var(--ink);
+			content: counter(ordered) '.';
+			counter-increment: ordered;
+			display: inline-block;
+			font-weight: 500;
+			margin-left: -50px;
+			margin-top: -7px;
+			padding: 5px 5px;
+			position: absolute;
+		}
+	}
 }

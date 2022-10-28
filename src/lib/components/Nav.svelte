@@ -30,10 +30,7 @@
 		<div class="nav-fh">
 			<a href="/">
 				<div class="logo">
-					<img
-						src="/favicon.png"
-						alt="favicon showing a heart, the logo of Svelte and the logo of D3."
-					/>
+					<img src="/logo.png" alt="Svelte and D3 logos placed over a heart" />
 				</div>
 			</a>
 			<div class="hamburger">
@@ -155,7 +152,8 @@
 			color: var(--text1-light);
 			text-decoration: none;
 			&.active {
-				border-color: var(--accent);
+				// border-color: var(--accent);
+				border-color: var(--selected-item);
 			}
 			&:hover,
 			&:focus {
