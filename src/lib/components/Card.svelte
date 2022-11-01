@@ -9,6 +9,7 @@
 	export let description = '';
 	export let demo = '';
 	export let sourceCode = '';
+	export let tags = ''; // sort alphabetically and remove whitespace
 	// TODO: open more info about each project in a modal via https://svelte.dev/repl/629f732d77fb48f79826b58b6ec4137f?version=3.37.0 ?
 
 	// TODO: add "&" before last author (and between 1 & 2 if only 2?)
@@ -27,10 +28,18 @@
 	<p class="description">{@html marked(description)}</p>
 
 	<div class="details flow">
-		<a class="pill" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
-		<a class="pill" target="_blank" rel="noopener noreferrer" href={sourceCode}
+		<a class="pill button" target="_blank" rel="noopener noreferrer" href={demo}
+			>Live Site &nearr;</a
+		>
+		<a class="pill button" target="_blank" rel="noopener noreferrer" href={sourceCode}
 			>Source Code &nearr;
 		</a>
+	</div>
+
+	<div class="tags flow">
+		{#each tags as tag}
+			<div class="pill">#{tag}</div>
+		{/each}
 	</div>
 </article>
 
@@ -49,13 +58,6 @@
 		& > .authors {
 			font-size: var(--step-0);
 		}
-		& > a {
-			text-decoration: none;
-
-			&:hover {
-				color: inherit;
-			}
-		}
 
 		&:hover {
 			box-shadow: 0px 0px 20px var(--accent);
@@ -63,12 +65,16 @@
 			max-height: fit-content;
 		}
 
-		.pill {
+		.button {
 			color: var(--ink);
 			padding: var(--space-m) var(--space-2xl);
 			margin-inline: var(--space-m);
 			width: min(60ch, 90%);
 			text-align: center;
+		}
+
+		.tags {
+			--flowspace: var(--space-xl);
 		}
 	}
 
