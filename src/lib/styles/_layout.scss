@@ -97,16 +97,15 @@ aside > ul {
 	}
 }
 
-.projects {
-	--min: 15ch;
-	--gap: 1rem;
+.grid {
+	// ht: https://smolcss.dev/#smol-flexbox-grid
+	--min: 30ch;
 
-	display: grid;
-	grid-gap: var(--gutter, var(--space-s-l));
-	/* min() with 100% prevents overflow
-    in extra narrow spaces */
-	grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-item-size, 16rem), 1fr));
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-xs);
 
-	grid-template-rows: masonry;
-	align-items: start;
+  	& > * {
+	flex: 1 1 var(--min);
+  	}
 }
