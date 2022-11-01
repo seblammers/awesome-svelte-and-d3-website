@@ -34,7 +34,7 @@
 <h2>In the wild</h2>
 <p>A curated list of awesome Projects:</p>
 
-<div class="container projects">
+<div class="container grid">
 	{#if $projectsQueryStore.fetching}
 		<p>Loading...</p>
 	{:else if $projectsQueryStore.error}
