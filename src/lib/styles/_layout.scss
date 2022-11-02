@@ -94,19 +94,19 @@ aside > ul {
 	&:hover {
 		background-color: var(--accent);
 		color: var(--surface2-light);
+		border: 0;
 	}
 }
 
 .button {
-	//margin-inline: var(--space-m);
-	//width: min(60ch, 90%);
-
 	border-radius: 0.5rem;
+	border: 0;
 	display: inline-block;
-	padding: var(--space-m) var(--space-2xl);
+	padding: var(--space-m) var(--space-xl);
+	
 	background: var(--ink);
 	color: var(--text1-dark);
-	border: 2px solid;
+	
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
