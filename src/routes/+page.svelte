@@ -49,6 +49,7 @@
 				slug={p.slug}
 				demo={p.demo}
 				sourceCode={p.sourceCode}
+				tags={p.tags}
 			/>
 		{/each}
 	{/if}

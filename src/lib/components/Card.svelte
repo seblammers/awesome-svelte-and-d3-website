@@ -9,7 +9,10 @@
 	export let description = '';
 	export let demo = '';
 	export let sourceCode = '';
-	export let tags = ''; // sort alphabetically and remove whitespace
+	export let tags = '';
+
+	tags.sort(); // sort alphabetically
+
 	// TODO: open more info about each project in a modal via https://svelte.dev/repl/629f732d77fb48f79826b58b6ec4137f?version=3.37.0 ?
 
 	// TODO: add "&" before last author (and between 1 & 2 if only 2?)
@@ -28,17 +31,16 @@
 	<p class="description">{@html marked(description)}</p>
 
 	<div class="details flow">
-		<a class="pill button" target="_blank" rel="noopener noreferrer" href={demo}
-			>Live Site &nearr;</a
-		>
-		<a class="pill button" target="_blank" rel="noopener noreferrer" href={sourceCode}
+		<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
+		<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
 			>Source Code &nearr;
 		</a>
 	</div>
 
 	<div class="tags flow">
+		Tags:
 		{#each tags as tag}
-			<div class="pill">#{tag}</div>
+			<div class="pill tag">#{tag}</div>
 		{/each}
 	</div>
 </article>
@@ -61,20 +63,23 @@
 
 		&:hover {
 			box-shadow: 0px 0px 20px var(--accent);
-			cursor: pointer;
-			max-height: fit-content;
-		}
-
-		.button {
-			color: var(--ink);
-			padding: var(--space-m) var(--space-2xl);
-			margin-inline: var(--space-m);
-			width: min(60ch, 90%);
-			text-align: center;
 		}
 
 		.tags {
 			--flowspace: var(--space-xl);
+			margin-top: var(--space-m);
+			font-size: var(--step-0);
+			color: lightgray;
+
+			.tag {
+				margin-inline: var(--space-3xs);
+			}
+			.tag:hover {
+				box-shadow: 0px 0px 20px var(--accent);
+				background-color: var(--awesome-red) !important;
+				cursor: pointer;
+				color: var(--text1-dark);
+			}
 		}
 	}
 
