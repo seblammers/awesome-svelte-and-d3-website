@@ -83,7 +83,7 @@ aside > ul {
 	display: inline-block;
 	padding: 0.3rem 0.4rem 0.2rem;
 	border-radius: 0.5rem;
-	border: 2px solid var(--accent);
+	border: 1px solid var(--accent);
 	background: var(--surface3-light);
 	color: inherit;
 	font-size: var(--step-0);
@@ -94,6 +94,27 @@ aside > ul {
 	&:hover {
 		background-color: var(--accent);
 		color: var(--surface2-light);
+	}
+}
+
+.button {
+	//margin-inline: var(--space-m);
+	//width: min(60ch, 90%);
+
+	border-radius: 0.5rem;
+	display: inline-block;
+	padding: var(--space-m) var(--space-2xl);
+	background: var(--ink);
+	color: var(--text1-dark);
+	border: 2px solid;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+  
+	// Make sure hover state trumps all variants 
+	&:hover {
+		background-color: var(--awesome-red) !important;
+		// color: var(--surface2-light) !important;
 	}
 }
 
