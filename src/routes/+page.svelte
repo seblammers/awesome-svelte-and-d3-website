@@ -59,3 +59,10 @@
 
 <h2>Tutorials</h2>
 <p>Here are the four most recent tutorials:</p>
+
+<style>
+	.button {
+		flex: 0 1 30ch;
+		margin-left: auto;
+	}
+</style>
