@@ -32,9 +32,9 @@
 <h1>Welcome to Awesome Svelte & D3</h1>
 
 <h2>In the wild</h2>
-<p>A curated list of awesome Projects:</p>
+<p>Here are the four most recent projects:</p>
 
-<div class="container projects">
+<div class="container grid">
 	{#if $projectsQueryStore.fetching}
 		<p>Loading...</p>
 	{:else if $projectsQueryStore.error}
@@ -49,7 +49,20 @@
 				slug={p.slug}
 				demo={p.demo}
 				sourceCode={p.sourceCode}
+				tags={p.tags}
 			/>
 		{/each}
 	{/if}
+
+	<a class="button" href="/projects">Show all projects</a>
 </div>
+
+<h2>Tutorials</h2>
+<p>Here are the four most recent tutorials:</p>
+
+<style>
+	.button {
+		flex: 0 1 30ch;
+		margin-left: auto;
+	}
+</style>

@@ -83,7 +83,7 @@ aside > ul {
 	display: inline-block;
 	padding: 0.3rem 0.4rem 0.2rem;
 	border-radius: 0.5rem;
-	border: 2px solid var(--accent);
+	border: 1px solid var(--accent);
 	background: var(--surface3-light);
 	color: inherit;
 	font-size: var(--step-0);
@@ -94,19 +94,39 @@ aside > ul {
 	&:hover {
 		background-color: var(--accent);
 		color: var(--surface2-light);
+		border-color: var(--awesome-red);
 	}
 }
 
-.projects {
-	--min: 15ch;
-	--gap: 1rem;
+.button {
+	border-radius: 0.5rem;
+	border: 0;
+	display: inline-block;
+	padding: var(--space-m) var(--space-xl);
+	
+	background: var(--ink);
+	color: var(--text1-dark);
+	
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+  
+	// Make sure hover state trumps all variants 
+	&:hover {
+		background-color: var(--awesome-red) !important;
+		// color: var(--surface2-light) !important;
+	}
+}
 
-	display: grid;
-	grid-gap: var(--gutter, var(--space-s-l));
-	/* min() with 100% prevents overflow
-    in extra narrow spaces */
-	grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-item-size, 16rem), 1fr));
+.grid {
+	// ht: https://smolcss.dev/#smol-flexbox-grid
+	--min: 30ch;
 
-	grid-template-rows: masonry;
-	align-items: start;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-xs);
+
+  	& > * {
+	flex: 1 1 var(--min);
+  	}
 }
