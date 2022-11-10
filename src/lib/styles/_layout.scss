@@ -6,12 +6,12 @@
 	box-sizing: border-box;
 	font-family: inherit;
 	max-width: 100%;
-	scrollbar-color: var(--accent);
+	scrollbar-color: var(--awesome-red);
 }
 
 html,
 body {
-	scrollbar-color: var(--accent) transparent;
+	scrollbar-color: var(--awesome-red) transparent;
 	scrollbar-width: thin;
 }
 
@@ -19,7 +19,7 @@ main {
 	width: 100%;
 	max-width: 80ch;
 	margin: var(--space-2xl) auto;
-	padding: 0 1rem;
+	padding: 0 var(--space-3xs);
 	min-height: 65vh; // make sure the footer does not get to big when content is little
 
 	& > p,
@@ -81,25 +81,25 @@ aside > ul {
 
 .pill {
 	display: inline-block;
-	padding: 0.3rem 0.4rem 0.2rem;
-	border-radius: 0.5rem;
-	border: 1px solid var(--accent);
-	background: var(--surface3-light);
-	color: inherit;
+	padding: var(--space-3xs);
+	border-radius: var(--radius);
+	border: 1px solid var(--text2-light);
+	color: var(--text2-light);
 	font-size: var(--step-0);
 	line-height: 1;
 	text-decoration: none;
 	text-transform: capitalize;
 
 	&:hover {
-		background-color: var(--accent);
-		color: var(--surface2-light);
+		background-color: var(--awesome-red);
 		border-color: var(--awesome-red);
+		color: var(--text1-dark);
+		cursor: pointer;
 	}
 }
 
 .button {
-	border-radius: 0.5rem;
+	border-radius: var(--radius);
 	border: 0;
 	border: 1px solid var(--ink);
 	display: inline-block;
@@ -107,6 +107,7 @@ aside > ul {
 	margin-top: var(--space-xs);
 	
 	color: var(--ink);
+	background-color: var(--surface0-light);
 	
 	text-transform: uppercase;
 	text-decoration: none;
