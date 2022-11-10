@@ -18,7 +18,7 @@
 	footer {
 		font-family: var(--accentFont);
 		font-weight: 300;
-		background: var(--ink);
+		background: var(--surface1-dark);
 		color: var(--text1-dark);
 		display: flex;
 		flex-wrap: wrap;
