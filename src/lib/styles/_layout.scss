@@ -101,11 +101,12 @@ aside > ul {
 .button {
 	border-radius: 0.5rem;
 	border: 0;
+	border: 1px solid var(--ink);
 	display: inline-block;
-	padding: var(--space-m) var(--space-xl);
+	padding: var(--space-s) var(--space-3xs);
+	margin-top: var(--space-xs);
 	
-	background: var(--ink);
-	color: var(--text1-dark);
+	color: var(--ink);
 	
 	text-transform: uppercase;
 	text-decoration: none;
@@ -114,7 +115,8 @@ aside > ul {
 	// Make sure hover state trumps all variants 
 	&:hover {
 		background-color: var(--awesome-red) !important;
-		// color: var(--surface2-light) !important;
+		color: var(--text1-dark) !important;
+		border-color: var(--awesome-red);
 	}
 }
 

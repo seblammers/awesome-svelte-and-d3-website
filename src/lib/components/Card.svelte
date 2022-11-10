@@ -30,7 +30,7 @@
 
 	<p class="description">{@html marked(description)}</p>
 
-	<div class="details flow">
+	<div class="details grid flow">
 		<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
 		<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
 			>Source Code &nearr;
@@ -52,9 +52,7 @@
 		border: var(--radius) solid var(--accent);
 		padding: var(--space-m);
 		background-color: var(--surface2-light);
-		// max-width: 32rem;
-		// max-height: 32rem;
-		overflow: hidden;
+
 		--flow-space: var(--space-xs);
 
 		& > .authors {
@@ -86,19 +84,25 @@
 	.title {
 		min-height: var(--space-xl);
 	}
+
 	.description {
 		min-height: var(--space-xl);
 		font-size: var(--step-0);
 	}
 	.details {
-		display: grid;
-		place-content: center;
 		margin: var(--space-xs) 0;
 		max-width: var(--max-width);
-		background-color: var(--surface4-light);
 		font-family: var(--accentFont);
 		font-size: var(--step-0);
 
 		--flow-space: var(--space-xs);
+
+		// allow less space for these buttons
+		--min: 20ch;
+	}
+
+	a:first-child {
+		// make sure both buttons have the same margin
+		margin-top: var(--space-xs);
 	}
 </style>
