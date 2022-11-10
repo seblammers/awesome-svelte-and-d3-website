@@ -47,11 +47,12 @@
 
 <style lang="scss">
 	.card {
+		--radius-card: 0.1rem;
 		font-family: var(--accentFont);
-		border-radius: var(--radius);
-		border: var(--radius) solid var(--accent);
+		border-radius: var(--radius-card);
+		border: var(--radius-card) solid var(--accent);
 		padding: var(--space-m);
-		background-color: var(--surface2-light);
+		background-color: var(--surface0-light);
 
 		--flow-space: var(--space-xs);
 
@@ -67,16 +68,10 @@
 			--flowspace: var(--space-xl);
 			margin-top: var(--space-m);
 			font-size: var(--step-0);
-			color: lightgray;
+			color: var(--text2-light);
 
 			.tag {
 				margin-inline: var(--space-3xs);
-			}
-			.tag:hover {
-				box-shadow: 0px 0px 20px var(--accent);
-				background-color: var(--awesome-red) !important;
-				cursor: pointer;
-				color: var(--text1-dark);
 			}
 		}
 	}
