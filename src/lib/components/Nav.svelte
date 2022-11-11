@@ -73,7 +73,7 @@
 		border-bottom: 4px solid rgba(0, 0, 0, 0);
 		transition: border-color 0.2s ease-in-out;
 
-		background-color: var(--surface1-light);
+		background-color: var(--surface0-light);
 
 		&.scroll {
 			box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
