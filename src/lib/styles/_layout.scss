@@ -19,7 +19,7 @@ main {
 	width: 100%;
 	max-width: 80ch;
 	margin: var(--space-2xl) auto;
-	padding: 0 var(--space-3xs);
+	padding: 0 var(--space-s);
 	min-height: 65vh; // make sure the footer does not get to big when content is little
 
 	& > p,
