@@ -30,7 +30,7 @@
 
 	<p class="description">{@html marked(description)}</p>
 
-	<div class="details flow">
+	<div class="details grid flow">
 		<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
 		<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
 			>Source Code &nearr;
@@ -47,14 +47,13 @@
 
 <style lang="scss">
 	.card {
+		--radius-card: 0.1rem;
 		font-family: var(--accentFont);
-		border-radius: var(--radius);
-		border: var(--radius) solid var(--accent);
+		border-radius: var(--radius-card);
+		border: var(--radius-card) solid var(--accent);
 		padding: var(--space-m);
-		background-color: var(--surface2-light);
-		// max-width: 32rem;
-		// max-height: 32rem;
-		overflow: hidden;
+		background-color: var(--surface0-light);
+
 		--flow-space: var(--space-xs);
 
 		& > .authors {
@@ -69,16 +68,10 @@
 			--flowspace: var(--space-xl);
 			margin-top: var(--space-m);
 			font-size: var(--step-0);
-			color: lightgray;
+			color: var(--text2-light);
 
 			.tag {
 				margin-inline: var(--space-3xs);
-			}
-			.tag:hover {
-				box-shadow: 0px 0px 20px var(--accent);
-				background-color: var(--awesome-red) !important;
-				cursor: pointer;
-				color: var(--text1-dark);
 			}
 		}
 	}
@@ -86,19 +79,25 @@
 	.title {
 		min-height: var(--space-xl);
 	}
+
 	.description {
 		min-height: var(--space-xl);
 		font-size: var(--step-0);
 	}
 	.details {
-		display: grid;
-		place-content: center;
 		margin: var(--space-xs) 0;
 		max-width: var(--max-width);
-		background-color: var(--surface4-light);
 		font-family: var(--accentFont);
 		font-size: var(--step-0);
 
 		--flow-space: var(--space-xs);
+
+		// allow less space for these buttons
+		--min: 20ch;
+	}
+
+	a:first-child {
+		// make sure both buttons have the same margin
+		margin-top: var(--space-xs);
 	}
 </style>

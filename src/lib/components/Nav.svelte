@@ -73,7 +73,7 @@
 		border-bottom: 4px solid rgba(0, 0, 0, 0);
 		transition: border-color 0.2s ease-in-out;
 
-		background-color: whitesmoke;
+		background-color: var(--surface0-light);
 
 		&.scroll {
 			box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
@@ -146,13 +146,13 @@
 		a {
 			// text-transform: capitalize;
 			font-weight: 600;
-			padding: 12px 8px;
+
+			padding: var(--space-xs) var(--space-3xs);
 			border-bottom: 4px solid rgba(0, 0, 0, 0);
 			transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 			color: var(--text1-light);
 			text-decoration: none;
 			&.active {
-				// border-color: var(--accent);
 				border-color: var(--selected-item);
 			}
 			&:hover,

@@ -1,40 +1,57 @@
 :root {
-	--blue-hue: 236;
-	--orange-hue: 34;
-	--saturation: 24%;
-	--lightness: 50%;
 
-	// orange for accents and surfaces
-	--brand: hsl(var(--orange-hue) var(--saturation) 90%);
-	--surface1-light: hsl(var(--orange-hue) calc(var(--saturation) - 10) 90%);
-	--surface2-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 99%);
-	--surface3-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 92%);
-	--surface4-light: hsl(var(--orange-hue) calc(var(--saturation) - 15) 85%);
+	// basic colours
+	--awesome-red: hsl(0, 100%, 50%);
+	--gray-color-000: hsl(0, 0%, 99%);
+	--gray-color-100: hsl(0, 0%, 95%);
+	--gray-color-200: hsl(0, 0%, 81.25%);
+	--gray-color-300: hsl(0, 0%, 67.5%);
+	--gray-color-400: hsl(0, 0%, 53.75%);
+	--gray-color-500: hsl(0, 0%, 40%);
+	--gray-color-600: hsl(0, 0%, 35%);
+    --gray-color-700: hsl(0, 0%, 10%);
 
-	// blue based colours for texts and shadows
-	--hue: var(--blue-hue);
-	--text1-light: hsl(var(--hue) var(--saturation) 10%);
-	--text2-light: hsl(var(--hue) 30% 30%);
-	--text1-dark: whitesmoke;
-	--surface-shadow-light: var(--hue) 10% calc(var(--lightness) / 5);
-	--shadow-strength-light: 0.02;
+	// semantic colour names
+	// light theme
+	--brand: var(--awesome-red);
+    --surface0-light: var(--gray-color-000);
+	--surface1-light: var(--gray-color-100);
+    --surface2-light: var(--gray-color-200);
+    --surface3-light: var(--gray-color-300);
+    --surface4-light: var(--gray-color-400);
 
-	--primary: var(--text1-light);
+    --text1-light: var(--gray-color-700);
+    --text2-light: var(--gray-color-600);
+
+	// for the occasional dark element (e.g. footer)
+	// flip light and dark
+	--surface1-dark: var(--text1-light);
+    --surface2-dark: var(--text2-light);
+	--text1-dark: var(--surface1-light);
+	--text2-dark: var(--surface2-light);
+
+	// some helpers for nice shadows
+	--hue: 0;
+    --saturation: 100%;
+    --lightness: 50%;
+     
+    --surface-shadow-light: var(--hue) 10% calc(var(--lightness) / 5);
+    --shadow-strength-light: .02;
+
+	--ink: var(--text1-light);
+	--paper: var(--surface1-light);
 	--emphasis: var(--text2-light);
 	--dark: var(--text1-light);
 
-	--accent: var(--brand);
-	--background: var(--surface1-light);
-	--background-nav: var(--surface4-light);
-	--ink: var(--primary);
-	--paper: var(--background);
+	--accent: var(--gray-color-200);
+	--background: var(--paper);
+	--background-nav: var(--surface3-light);
+	 
 
-	--radius: 0.1em;
+	--radius: 0.5rem;
 	--max-width: 60rem;
 
-	// custom colours for navbar
-
-	--awesome-red: #ff0000;
+	// custom color for navbar
 	--selected-item: var(--awesome-red);
 
 	

@@ -30,8 +30,8 @@ body {
 }
 
 ::selection {
-	color: var(--accent);
-	background: var(--dark);
+	color: var(--text1-dark);
+	background: var(--awesome-red);
 }
 
 .flow > * + * {

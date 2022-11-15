@@ -1,17 +1,12 @@
 @use './vars';
 
 :where(h1, h2, h3, h4, h5, h6) {
-	//margin: 4.5rem 0 1rem;
 	margin-top: var(--space-xl);
 	line-height: 1;
 	font-family: var(--headingFont);
 	font-weight: 700;
 
 	color: var(--text1-light);
-
-	// &:hover {
-	// 	text-decoration: underline var(--accent);
-	// }
 }
 
 h1 {
@@ -51,7 +46,7 @@ h4 {
 
 	& > a {
 		color: currentColor;
-		text-decoration: none;
+		text-decoration: underline;
 
 		&:hover {
 			color: var(--dark);
@@ -62,13 +57,14 @@ h4 {
 p > a {
 	color: var(--dark);
 	color: currentColor;
+	text-decoration: underline;
 	text-decoration-color: var(--dark);
-	text-underline-offset: 1px;
+	text-underline-offset: 2px;
 
 	&:hover {
-		color: var(--surface2-light);
-		background-color: var(--accent);
-		text-decoration-color: var(--surface2-light);
+		color: var(--text1-dark);
+		background-color: var(--awesome-red);
+		text-decoration-color: var(--text1-dark);
 	}
 }
 
@@ -81,7 +77,7 @@ ul {
 	}
 
 	::marker {
-		color: var(--accent);
+		color: var(--awesome-red);
 	}
 }
 
@@ -94,8 +90,7 @@ ol {
 		margin-bottom: var(--space-m);
 
 		&::before {
-			border-bottom: calc(var(--space-3xs) / 1.5) solid var(--accent);
-			// border-radius: .5rem;
+			border-bottom: calc(var(--space-3xs) / 1.5) solid var(--awesome-red);
 			color: var(--ink);
 			content: counter(ordered) '.';
 			counter-increment: ordered;
