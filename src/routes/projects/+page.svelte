@@ -3,7 +3,6 @@
 	import ProjectCard from '$lib/components/Card.svelte';
 	import Tags from 'svelte-tags-input';
 
-	// see https://dev.to/tiim/sveltekit-server-side-rendering-ssr-with-urqlsvelte-534k
 	const projectsQueryStore = queryStore({
 		client: getContextClient(),
 		query: gql`
@@ -24,38 +23,23 @@
 		`
 	});
 
-	// $: tags_all = [...new Set($projectsQueryStore.data.projects.map((item) => item.tags))].reduce(
-	// 	(accumulator, currentValue) => accumulator.concat(currentValue),
-	// 	[]
-	// );
+	// start with empty taglist
+	// this is where tags will be added
+	let taglist = [];
 
-	// //$: console.log(tags_all);
+	// this will add a tag to the filter-list when clicked on in the cards
+	function addTag(event) {
+		taglist.push(event.detail.text);
+		taglist = taglist;
+	}
 
-	// let tags_all_lower = [];
-
-	// $: {
-	// 	tags_all.forEach((element) => {
-	// 		tags_all_lower.push(element.toLowerCase());
-	// 	});
-	// 	// for (const tag of tags_all) {
-	// 	// 	console.log(tag.toLowerCase());
-	// 	// 	tags_all_lower.push(tag.toLowerCase());
-	// 	// }
-	// }
-
-	// $: console.log(tags_all_lower);
-
-	// $: tags_unique = [...new Set(tags_all_lower)];
-
-	// $: console.log(tags_unique);
-
-	// If on:tags is defined
-	let taglist = '';
-
+	// this is the native function provided by svelte-tags-input
 	function handleTags(event) {
 		taglist = event.detail.tags;
 	}
 
+	// WIP: a list of all (?) tags
+	// used for autocomplete!
 	let tags_unique = [
 		'scrollytelling',
 		'scatter',
@@ -78,13 +62,21 @@
 <h2>Projects in the wild</h2>
 
 <h4>Use tags to filter out specific projects:</h4>
-<Tags
-	on:tags={handleTags}
-	placeholder={'Enter a tag...'}
-	autoComplete={tags_unique}
-	name={'selected-tags'}
-	id={'tag-selector'}
-/>
+<p class="instruction">
+	You can either start typing and use autocomplete or click on the little tags within each
+	Project-Card.
+</p>
+
+<div class="tag-wrapper">
+	<Tags
+		on:tags={handleTags}
+		placeholder={'Enter a tag...'}
+		autoComplete={tags_unique}
+		name={'selected-tags'}
+		id={'tag-selector'}
+		tags={taglist}
+	/>
+</div>
 
 <div class="container grid">
 	{#if $projectsQueryStore.fetching}
@@ -95,6 +87,7 @@
 		{#each $projectsQueryStore.data.projects as p}
 			{#key taglist}
 				<ProjectCard
+					on:addTag={addTag}
 					name={p.name}
 					authors={p.authors}
 					description={p.description}
@@ -109,3 +102,26 @@
 		{/each}
 	{/if}
 </div>
+
+<style lang="scss">
+	.instruction {
+		font-size: var(--step-0);
+	}
+	.tag-wrapper :global(.svelte-tags-input) {
+		font-family: inherit;
+		font-size: var(--step-0);
+	}
+
+	.tag-wrapper :global(.svelte-tags-input-matchs) {
+		font-family: inherit;
+		font-size: var(--step-0);
+	}
+	.tag-wrapper :global(.svelte-tags-input-tag) {
+		font-family: inherit;
+		font-size: var(--step-0);
+	}
+
+	.tag-wrapper :global(.svelte-tags-input-layout) {
+		font-family: inherit;
+	}
+</style>
