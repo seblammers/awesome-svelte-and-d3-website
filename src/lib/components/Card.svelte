@@ -10,8 +10,19 @@
 	export let demo = '';
 	export let sourceCode = '';
 	export let tags = '';
+	export let taglist;
 
 	tags.sort(); // sort alphabetically
+
+	let show = true;
+
+	$: {
+		if (taglist) {
+			show = taglist.every((r) => tags.includes(r));
+		}
+	}
+
+	$: console.log({ taglist, show });
 
 	// TODO: open more info about each project in a modal via https://svelte.dev/repl/629f732d77fb48f79826b58b6ec4137f?version=3.37.0 ?
 
@@ -21,29 +32,31 @@
 	}
 </script>
 
-<article class="card flow">
-	<div class="title">
-		<strong>{name}</strong>
-	</div>
-	<img src={url} alt={name} />
-	<p class="authors">by {authors}</p>
+{#if show}
+	<article class="card flow">
+		<div class="title">
+			<strong>{name}</strong>
+		</div>
+		<img src={url} alt={name} />
+		<p class="authors">by {authors}</p>
 
-	<p class="description">{@html marked(description)}</p>
+		<p class="description">{@html marked(description)}</p>
 
-	<div class="details grid flow">
-		<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
-		<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
-			>Source Code &nearr;
-		</a>
-	</div>
+		<div class="details grid flow">
+			<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
+			<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
+				>Source Code &nearr;
+			</a>
+		</div>
 
-	<div class="tags flow">
-		Tags:
-		{#each tags as tag}
-			<div class="pill tag">#{tag}</div>
-		{/each}
-	</div>
-</article>
+		<div class="tags flow">
+			Tags:
+			{#each tags as tag}
+				<div class="pill tag">#{tag}</div>
+			{/each}
+		</div>
+	</article>
+{/if}
 
 <style lang="scss">
 	.card {
