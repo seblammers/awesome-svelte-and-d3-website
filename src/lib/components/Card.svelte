@@ -1,4 +1,5 @@
 <script>
+	import Pill from '$lib/components/Pill.svelte';
 	import { marked } from 'marked';
 	export let url = '';
 	export let name = '';
@@ -13,18 +14,15 @@
 	export let taglist;
 
 	tags.sort(); // sort alphabetically
+	let show = true; // helper to toggle visibility
 
-	let show = true;
-
+	// reactively toggle visibility
+	// if all filter-tags match given project-tags
 	$: {
 		if (taglist) {
 			show = taglist.every((r) => tags.includes(r));
 		}
 	}
-
-	$: console.log({ taglist, show });
-
-	// TODO: open more info about each project in a modal via https://svelte.dev/repl/629f732d77fb48f79826b58b6ec4137f?version=3.37.0 ?
 
 	// TODO: add "&" before last author (and between 1 & 2 if only 2?)
 	if (authors.length > 1) {
@@ -50,15 +48,17 @@
 		</div>
 
 		<div class="tags flow">
-			Tags:
 			{#each tags as tag}
-				<div class="pill tag">#{tag}</div>
+				<Pill on:addTag {tag} />
 			{/each}
 		</div>
 	</article>
 {/if}
 
 <style lang="scss">
+	img {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
 	.card {
 		--radius-card: 0.1rem;
 		font-family: var(--accentFont);
