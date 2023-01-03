@@ -38,9 +38,8 @@
 	</div>
 
 	<div class="tags flow">
-		Tags:
 		{#each tags as tag}
-			<div class="pill tag">#{tag}</div>
+			<div class="pill tag">{tag}</div>
 		{/each}
 	</div>
 </article>
