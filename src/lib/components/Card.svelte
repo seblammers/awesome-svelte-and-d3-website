@@ -71,6 +71,7 @@
 
 			.tag {
 				margin-inline: var(--space-3xs);
+				font-size: var(--step-0);
 			}
 		}
 	}
