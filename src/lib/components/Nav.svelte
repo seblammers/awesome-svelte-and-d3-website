@@ -129,7 +129,7 @@
 					flex-direction: row;
 					gap: var(--space-s);
 					a {
-						font-size: var(--step-1);
+						font-size: var(--step-0);
 						border-width: 2px;
 						// border: none;
 					}
@@ -142,7 +142,7 @@
 		align-items: center;
 		flex-direction: column;
 		gap: var(--space-s);
-		font-size: var(--step-3);
+		font-size: var(--step-2);
 		a {
 			// text-transform: capitalize;
 			font-weight: 600;

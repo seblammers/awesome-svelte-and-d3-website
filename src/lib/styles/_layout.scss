@@ -81,7 +81,7 @@ aside > ul {
 
 .pill {
 	display: inline-block;
-	padding: var(--space-3xs);
+	padding: var(--space-2xs);
 	border-radius: var(--radius);
 	border: 1px solid var(--text2-light);
 	color: var(--text2-light);
@@ -105,15 +105,15 @@ aside > ul {
 	display: inline-block;
 	padding: var(--space-s) var(--space-3xs);
 	margin-top: var(--space-xs);
-	
+
 	color: var(--ink);
 	background-color: var(--surface0-light);
-	
+
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
-  
-	// Make sure hover state trumps all variants 
+
+	// Make sure hover state trumps all variants
 	&:hover {
 		background-color: var(--awesome-red) !important;
 		color: var(--text1-dark) !important;
@@ -129,7 +129,7 @@ aside > ul {
 	flex-wrap: wrap;
 	gap: var(--space-xs);
 
-  	& > * {
-	flex: 1 1 var(--min);
-  	}
+	& > * {
+		flex: 1 1 var(--min);
+	}
 }
