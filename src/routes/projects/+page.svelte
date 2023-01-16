@@ -2,6 +2,7 @@
 	import { getContextClient, gql, queryStore } from '@urql/svelte';
 	import ProjectCard from '$lib/components/Card.svelte';
 	import Tags from 'svelte-tags-input';
+	import Accordion from '$lib/components/Accordion.svelte';
 
 	const projectsQueryStore = queryStore({
 		client: getContextClient(),
@@ -29,8 +30,12 @@
 
 	// this will add a tag to the filter-list when clicked on in the cards
 	function addTag(event) {
-		taglist.push(event.detail.text);
-		taglist = taglist;
+		var newTag = event.detail.text;
+		// but add the tag only if it is not already included
+		if (!taglist.includes(newTag)) {
+			taglist.push(newTag);
+			taglist = taglist;
+		}
 	}
 
 	// this is the native function provided by svelte-tags-input
@@ -61,22 +66,25 @@
 
 <h2>Projects in the wild</h2>
 
-<h4>Use tags to filter out specific projects:</h4>
-<p class="instruction">
-	You can either start typing and use autocomplete or click on the little tags within each
-	Project-Card.
-</p>
+<Accordion summary="Filter items">
+	<h4>Use tags to filter out specific projects:</h4>
+	<p class="instruction">
+		You can either start typing and use autocomplete or click on the tags within each Project-Card.
+	</p>
 
-<div class="tag-wrapper">
-	<Tags
-		on:tags={handleTags}
-		placeholder={'Enter a tag...'}
-		autoComplete={tags_unique}
-		name={'selected-tags'}
-		id={'tag-selector'}
-		tags={taglist}
-	/>
-</div>
+	<div class="tag-wrapper">
+		<Tags
+			on:tags={handleTags}
+			placeholder={'Enter a tag...'}
+			autoComplete={tags_unique}
+			onlyAutocomplete={true}
+			onlyUnique={true}
+			name={'selected-tags'}
+			id={'tag-selector'}
+			tags={taglist}
+		/>
+	</div>
+</Accordion>
 
 <div class="container grid">
 	{#if $projectsQueryStore.fetching}
