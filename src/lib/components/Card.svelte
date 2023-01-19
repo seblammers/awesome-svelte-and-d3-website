@@ -1,4 +1,5 @@
 <script>
+	import Pill from '$lib/components/Pill.svelte';
 	import { marked } from 'marked';
 	export let url = '';
 	export let name = '';
@@ -10,10 +11,18 @@
 	export let demo = '';
 	export let sourceCode = '';
 	export let tags = '';
+	export let taglist;
 
 	tags.sort(); // sort alphabetically
+	let show = true; // helper to toggle visibility
 
-	// TODO: open more info about each project in a modal via https://svelte.dev/repl/629f732d77fb48f79826b58b6ec4137f?version=3.37.0 ?
+	// reactively toggle visibility
+	// if all filter-tags match given project-tags
+	$: {
+		if (taglist) {
+			show = taglist.every((r) => tags.includes(r));
+		}
+	}
 
 	// TODO: add "&" before last author (and between 1 & 2 if only 2?)
 	if (authors.length > 1) {
@@ -21,30 +30,35 @@
 	}
 </script>
 
-<article class="card flow">
-	<div class="title">
-		<strong>{name}</strong>
-	</div>
-	<img src={url} alt={name} />
-	<p class="authors">by {authors}</p>
+{#if show}
+	<article class="card flow">
+		<div class="title">
+			<strong>{name}</strong>
+		</div>
+		<img src={url} alt={name} />
+		<p class="authors">by {authors}</p>
 
-	<p class="description">{@html marked(description)}</p>
+		<p class="description">{@html marked(description)}</p>
 
-	<div class="details grid flow">
-		<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
-		<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
-			>Source Code &nearr;
-		</a>
-	</div>
+		<div class="details grid flow">
+			<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
+			<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
+				>Source Code &nearr;
+			</a>
+		</div>
 
-	<div class="tags flow">
-		{#each tags as tag}
-			<div class="pill tag">{tag}</div>
-		{/each}
-	</div>
-</article>
+		<div class="tags flow">
+			{#each tags as tag}
+				<Pill on:addTag {tag} />
+			{/each}
+		</div>
+	</article>
+{/if}
 
 <style lang="scss">
+	img {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
 	.card {
 		--radius-card: 0.1rem;
 		font-family: var(--accentFont);
