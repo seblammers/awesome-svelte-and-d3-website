@@ -97,6 +97,12 @@
 	/* Custom pairs */
 	--space-s-l: clamp(1rem, calc(0.15rem + 4.27vw), 3.75rem);
 
+	// fluid grid
+	--auto-grid-min-size: 32rem;
+	--grid-max-width: 77.50rem;
+	--grid-gutter: var(--space-s);
+	--grid-columns: 12;
+
 	// some additional vars inspired by Andy Bell's Build-Excellent-Websites
 	--gutter: var(--space-s-m);
 	--border-radius: var(--step-1);
