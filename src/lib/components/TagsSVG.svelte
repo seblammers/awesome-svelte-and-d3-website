@@ -19,7 +19,8 @@
 		height: var(--space-m);
 		margin: 0;
 		position: absolute;
-		bottom: 0;
+		top: 50%;
+		transform: translateY(-50%);
 		right: 0;
 	}
 </style>
