@@ -35,6 +35,9 @@
 		if (!taglist.includes(newTag)) {
 			taglist.push(newTag);
 			taglist = taglist;
+			// if the tag is already there, remove it
+		} else if (taglist.includes(newTag)) {
+			taglist = taglist.filter((item) => item !== newTag);
 		}
 	}
 
