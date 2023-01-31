@@ -27,6 +27,10 @@
 	.tag {
 		position: relative;
 		background-color: var(--surface0-light);
+
+		&:hover {
+			background-color: var(--awesome-red);
+		}
 	}
 	.active {
 		background-color: var(--surface1-dark);
