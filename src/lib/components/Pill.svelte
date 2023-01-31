@@ -24,6 +24,10 @@
 </button>
 
 <style lang="scss">
+	.tag {
+		position: relative;
+		background-color: var(--surface0-light);
+	}
 	.active {
 		background-color: var(--surface1-dark);
 		color: var(--text1-dark);
@@ -34,7 +38,7 @@
 		}
 	}
 	button {
-		background-color: inherit;
 		margin: var(--space-3xs);
+		z-index: 1;
 	}
 </style>

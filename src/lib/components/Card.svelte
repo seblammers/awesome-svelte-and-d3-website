@@ -1,6 +1,8 @@
 <script>
 	import Pill from '$lib/components/Pill.svelte';
+	import TagsSvg from '$lib/components/TagsSVG.svelte';
 	import { marked } from 'marked';
+
 	export let url = '';
 	export let name = '';
 	export let authors = '';
@@ -49,8 +51,9 @@
 
 		<div class="tags flow">
 			{#each tags as tag}
-				<Pill on:addTag {tag} />
+				<Pill on:addTag {tag} {taglist} />
 			{/each}
+			<TagsSvg />
 		</div>
 	</article>
 {/if}
@@ -78,6 +81,10 @@
 		}
 
 		.tags {
+			position: relative;
+			background-color: var(--surface1-light);
+			border-radius: var(--radius);
+			border: var(--radius-card) solid var(surface1-light);
 			--flowspace: var(--space-xl);
 			margin-top: var(--space-m);
 			font-size: var(--step-0);
