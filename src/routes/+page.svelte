@@ -3,6 +3,7 @@
 	import ProjectCard from '$lib/components/Card.svelte';
 
 	export let data;
+	let taglist = [];
 
 	const projectsQueryStore = queryStore({
 		client: getContextClient(),
@@ -32,37 +33,42 @@
 <h1>Welcome to Awesome Svelte & D3</h1>
 
 <h2>In the wild</h2>
-<p>Here are the four most recent projects:</p>
+<p>Here are the three most recent projects:</p>
 
-<div class="container grid">
+<section class="u-container">
 	{#if $projectsQueryStore.fetching}
 		<p>Loading...</p>
 	{:else if $projectsQueryStore.error}
 		<p>Oopsie! {$projectsQueryStore.error.message}</p>
 	{:else}
-		{#each $projectsQueryStore.data.projects as p}
-			<ProjectCard
-				name={p.name}
-				authors={p.authors}
-				description={p.description}
-				url={p.image[0].url}
-				slug={p.slug}
-				demo={p.demo}
-				sourceCode={p.sourceCode}
-				tags={p.tags}
-			/>
-		{/each}
-	{/if}
+		<div class="u-grid">
+			{#each $projectsQueryStore.data.projects.slice(0, 3) as p}
+				<ProjectCard
+					name={p.name}
+					authors={p.authors}
+					description={p.description}
+					url={p.image[0].url}
+					slug={p.slug}
+					demo={p.demo}
+					sourceCode={p.sourceCode}
+					tags={p.tags}
+					{taglist}
+				/>
+			{/each}
+		</div>
 
-	<a class="button" href="/projects">Show all projects</a>
-</div>
+		<a class="button" href="/projects">Show all projects</a>
+	{/if}
+</section>
 
 <h2>Tutorials</h2>
-<p>Here are the four most recent tutorials:</p>
+<p>Here are the three most recent tutorials:</p>
 
 <style>
 	.button {
-		flex: 0 1 30ch;
-		margin-left: auto;
+		position: relative;
+		display: block;
+		text-align: center;
+		margin: var(--space-s) var(--space-l-xl);
 	}
 </style>
