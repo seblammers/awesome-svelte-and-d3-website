@@ -17,13 +17,11 @@
 <div class="layout">
 	<Nav />
 
-	<section class="u-container">
-		{#key data.currentRoute}
-			<main class="flow">
-				<slot />
-			</main>
-		{/key}
-	</section>
+	{#key data.currentRoute}
+		<main class="flow">
+			<slot />
+		</main>
+	{/key}
 
 	<Footer />
 </div>
