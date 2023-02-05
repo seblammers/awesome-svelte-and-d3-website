@@ -98,9 +98,9 @@
 	--space-s-l: clamp(1rem, calc(0.15rem + 4.27vw), 3.75rem);
 
 	// fluid grid
-	--auto-grid-min-size: calc(var(--space-2xl) * 2);
+	--auto-grid-min-size: calc(var(--space-3xl) * 1.5);
 	--grid-max-width: 70rem;
-	--grid-gutter: var(--space-2xs);
+	--grid-gutter: var(--space-xs);
 	--grid-columns: 12;
 
 	// some additional vars inspired by Andy Bell's Build-Excellent-Websites

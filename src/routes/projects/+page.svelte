@@ -93,32 +93,30 @@
 	</div>
 </Accordion>
 
-<section class="u-container">
-	{#if $projectsQueryStore.fetching}
-		<p>Loading...</p>
-	{:else if $projectsQueryStore.error}
-		<p>Oopsie! {$projectsQueryStore.error.message}</p>
-	{:else}
-		<div class="u-grid">
-			{#each $projectsQueryStore.data.projects as p}
-				{#key taglist}
-					<ProjectCard
-						on:addTag={addTag}
-						name={p.name}
-						authors={p.authors}
-						description={p.description}
-						url={p.image[0].url}
-						slug={p.slug}
-						demo={p.demo}
-						sourceCode={p.sourceCode}
-						tags={p.tags}
-						{taglist}
-					/>
-				{/key}
-			{/each}
-		</div>
-	{/if}
-</section>
+{#if $projectsQueryStore.fetching}
+	<p>Loading...</p>
+{:else if $projectsQueryStore.error}
+	<p>Oopsie! {$projectsQueryStore.error.message}</p>
+{:else}
+	<div class="u-grid">
+		{#each $projectsQueryStore.data.projects as p}
+			{#key taglist}
+				<ProjectCard
+					on:addTag={addTag}
+					name={p.name}
+					authors={p.authors}
+					description={p.description}
+					url={p.image[0].url}
+					slug={p.slug}
+					demo={p.demo}
+					sourceCode={p.sourceCode}
+					tags={p.tags}
+					{taglist}
+				/>
+			{/key}
+		{/each}
+	</div>
+{/if}
 
 <style lang="scss">
 	.instruction {
