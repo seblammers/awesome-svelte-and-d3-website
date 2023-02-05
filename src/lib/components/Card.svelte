@@ -65,7 +65,7 @@
 	.card {
 		--radius-card: 0.1rem;
 		font-family: var(--accentFont);
-		border-radius: var(--radius-card);
+		border-radius: var(--radius);
 		border: var(--radius-card) solid var(--accent);
 		padding: var(--space-m);
 		background-color: var(--surface0-light);
