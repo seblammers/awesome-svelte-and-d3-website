@@ -97,6 +97,7 @@
 	.description {
 		min-height: var(--space-xl);
 		font-size: var(--step-0);
+		color: var(--text2-light);
 	}
 	.details {
 		margin: var(--space-xs) 0;

@@ -66,7 +66,7 @@
 
 <h2>Projects in the wild</h2>
 
-<Accordion summary="Filter items">
+<Accordion summary="Filter Projects">
 	<h4>Use tags to filter out specific projects:</h4>
 	<p class="instruction">
 		You can either start typing and use autocomplete or click on the tags within each Project-Card.
@@ -86,35 +86,40 @@
 	</div>
 </Accordion>
 
-<div class="container grid">
+<section class="u-container">
 	{#if $projectsQueryStore.fetching}
 		<p>Loading...</p>
 	{:else if $projectsQueryStore.error}
 		<p>Oopsie! {$projectsQueryStore.error.message}</p>
 	{:else}
-		{#each $projectsQueryStore.data.projects as p}
-			{#key taglist}
-				<ProjectCard
-					on:addTag={addTag}
-					name={p.name}
-					authors={p.authors}
-					description={p.description}
-					url={p.image[0].url}
-					slug={p.slug}
-					demo={p.demo}
-					sourceCode={p.sourceCode}
-					tags={p.tags}
-					{taglist}
-				/>
-			{/key}
-		{/each}
+		<div class="u-grid">
+			{#each $projectsQueryStore.data.projects as p}
+				{#key taglist}
+					<ProjectCard
+						on:addTag={addTag}
+						name={p.name}
+						authors={p.authors}
+						description={p.description}
+						url={p.image[0].url}
+						slug={p.slug}
+						demo={p.demo}
+						sourceCode={p.sourceCode}
+						tags={p.tags}
+						{taglist}
+					/>
+				{/key}
+			{/each}
+		</div>
 	{/if}
-</div>
+</section>
 
 <style lang="scss">
 	.instruction {
 		font-size: var(--step-0);
 	}
+
+	// the following had to be added in this manner to override the styles of the
+	// svelte-tags-input component
 	.tag-wrapper :global(.svelte-tags-input) {
 		font-family: inherit;
 		font-size: var(--step-0);
