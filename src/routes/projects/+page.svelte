@@ -28,6 +28,10 @@
 	// this is where tags will be added
 	let taglist = [];
 
+	// keep track of number of tags to display in filter box
+	// results in "(0 tags active)" or "(1 tag active)" or "(23 tags active)" etc.
+	$: n_tags = `(${taglist.length} ${taglist.length === 1 ? 'tag' : 'tags'} active)`;
+
 	// this will add a tag to the filter-list when clicked on in the cards
 	function addTag(event) {
 		var newTag = event.detail.text;
@@ -35,6 +39,9 @@
 		if (!taglist.includes(newTag)) {
 			taglist.push(newTag);
 			taglist = taglist;
+			// if the tag is already there, remove it
+		} else if (taglist.includes(newTag)) {
+			taglist = taglist.filter((item) => item !== newTag);
 		}
 	}
 
@@ -66,7 +73,7 @@
 
 <h2>Projects in the wild</h2>
 
-<Accordion summary="Filter Projects">
+<Accordion summary="Filter Projects {n_tags}">
 	<h4>Use tags to filter out specific projects:</h4>
 	<p class="instruction">
 		You can either start typing and use autocomplete or click on the tags within each Project-Card.
@@ -86,32 +93,30 @@
 	</div>
 </Accordion>
 
-<section class="u-container">
-	{#if $projectsQueryStore.fetching}
-		<p>Loading...</p>
-	{:else if $projectsQueryStore.error}
-		<p>Oopsie! {$projectsQueryStore.error.message}</p>
-	{:else}
-		<div class="u-grid">
-			{#each $projectsQueryStore.data.projects as p}
-				{#key taglist}
-					<ProjectCard
-						on:addTag={addTag}
-						name={p.name}
-						authors={p.authors}
-						description={p.description}
-						url={p.image[0].url}
-						slug={p.slug}
-						demo={p.demo}
-						sourceCode={p.sourceCode}
-						tags={p.tags}
-						{taglist}
-					/>
-				{/key}
-			{/each}
-		</div>
-	{/if}
-</section>
+{#if $projectsQueryStore.fetching}
+	<p>Loading...</p>
+{:else if $projectsQueryStore.error}
+	<p>Oopsie! {$projectsQueryStore.error.message}</p>
+{:else}
+	<div class="u-grid">
+		{#each $projectsQueryStore.data.projects as p}
+			{#key taglist}
+				<ProjectCard
+					on:addTag={addTag}
+					name={p.name}
+					authors={p.authors}
+					description={p.description}
+					url={p.image[0].url}
+					slug={p.slug}
+					demo={p.demo}
+					sourceCode={p.sourceCode}
+					tags={p.tags}
+					{taglist}
+				/>
+			{/key}
+		{/each}
+	</div>
+{/if}
 
 <style lang="scss">
 	.instruction {

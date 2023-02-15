@@ -16,6 +16,8 @@
 <style>
 	details {
 		--flow-space: var(--space-s);
+		border-radius: var(--radius);
+		border: 0.1rem solid var(--accent);
 		padding: var(--space-s);
 		margin: var(--space-xs) 0;
 		background-color: var(--surface0-light);

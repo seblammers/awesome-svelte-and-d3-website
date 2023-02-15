@@ -1,6 +1,8 @@
 <script>
 	import Pill from '$lib/components/Pill.svelte';
+	import TagsSvg from '$lib/components/TagsSVG.svelte';
 	import { marked } from 'marked';
+
 	export let url = '';
 	export let name = '';
 	export let authors = '';
@@ -49,8 +51,9 @@
 
 		<div class="tags flow">
 			{#each tags as tag}
-				<Pill on:addTag {tag} />
+				<Pill on:addTag {tag} {taglist} />
 			{/each}
+			<TagsSvg />
 		</div>
 	</article>
 {/if}
@@ -59,58 +62,6 @@
 	img {
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
-	.card {
-		--radius-card: 0.1rem;
-		font-family: var(--accentFont);
-		border-radius: var(--radius-card);
-		border: var(--radius-card) solid var(--accent);
-		padding: var(--space-m);
-		background-color: var(--surface0-light);
-
-		--flow-space: var(--space-xs);
-
-		& > .authors {
-			font-size: var(--step-0);
-		}
-
-		&:hover {
-			box-shadow: 0px 0px 20px var(--accent);
-		}
-
-		.tags {
-			--flowspace: var(--space-xl);
-			margin-top: var(--space-m);
-			font-size: var(--step-0);
-			color: var(--text2-light);
-
-			.tag {
-				margin-inline: var(--space-3xs);
-				font-size: var(--step-0);
-			}
-		}
-	}
-
-	.title {
-		min-height: var(--space-xl);
-	}
-
-	.description {
-		min-height: var(--space-xl);
-		font-size: var(--step-0);
-		color: var(--text2-light);
-	}
-	.details {
-		margin: var(--space-xs) 0;
-		max-width: var(--max-width);
-		font-family: var(--accentFont);
-		font-size: var(--step-0);
-
-		--flow-space: var(--space-xs);
-
-		// allow less space for these buttons
-		--min: 20ch;
-	}
-
 	a:first-child {
 		// make sure both buttons have the same margin
 		margin-top: var(--space-xs);

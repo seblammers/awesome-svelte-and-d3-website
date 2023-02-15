@@ -30,7 +30,7 @@
 		<div class="nav-fh">
 			<a href="/">
 				<div class="logo">
-					<img src="/logo.png" alt="Svelte and D3 logos placed over a heart" />
+					<img src="/favicon.svg" alt="Svelte and D3 logos placed over a heart" />
 				</div>
 			</a>
 			<div class="hamburger">
@@ -95,7 +95,7 @@
 		width: 100%;
 		max-width: 1600px;
 		margin: 0 auto;
-		padding: var(--space-s);
+		padding: var(--space-xs);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -129,7 +129,7 @@
 					flex-direction: row;
 					gap: var(--space-s);
 					a {
-						font-size: var(--step-0);
+						font-size: var(--step-1);
 						border-width: 2px;
 						// border: none;
 					}

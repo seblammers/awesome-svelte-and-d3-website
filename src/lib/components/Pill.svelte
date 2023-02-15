@@ -3,6 +3,14 @@
 	const dispatch = createEventDispatcher();
 
 	export let tag = '';
+	export let taglist;
+	let active = false; // helper to toggle style
+
+	// reactively toggle active-styling
+	// if a given project-tag is included in the taglist
+	$: {
+		active = taglist.some((r) => tag.includes(r));
+	}
 
 	function addTag() {
 		dispatch('addTag', {
@@ -11,13 +19,30 @@
 	}
 </script>
 
-<button class="pill tag" on:click={addTag} {tag}>
+<button class:active class="pill tag" on:click={addTag} {tag}>
 	{tag}
 </button>
 
-<style>
+<style lang="scss">
+	.tag {
+		position: relative;
+		background-color: var(--surface0-light);
+
+		&:hover {
+			background-color: var(--awesome-red);
+		}
+	}
+	.active {
+		background-color: var(--surface1-dark);
+		color: var(--text1-dark);
+
+		&:hover {
+			background-color: var(--surface2-dark);
+			border-color: var(--surface2-dark);
+		}
+	}
 	button {
-		background-color: inherit;
 		margin: var(--space-3xs);
+		z-index: 1;
 	}
 </style>
