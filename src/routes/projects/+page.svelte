@@ -13,7 +13,7 @@
 					authors
 					slug
 					description
-					tags
+					dropdownTags
 					demo
 					sourceCode
 					image {
@@ -53,6 +53,7 @@
 	// WIP: a list of all (?) tags
 	// used for autocomplete!
 	let tags_unique = [
+		'machine learning',
 		'scrollytelling',
 		'scatter',
 		'line',
@@ -60,10 +61,11 @@
 		'map',
 		'bump',
 		'sankey',
-		'machineLearning',
 		'statistics',
 		'interactive',
-		'food'
+		'food',
+		'histogram',
+		'webGL'
 	];
 </script>
 
@@ -110,7 +112,7 @@
 					slug={p.slug}
 					demo={p.demo}
 					sourceCode={p.sourceCode}
-					tags={p.tags}
+					tags={p.dropdownTags}
 					{taglist}
 				/>
 			{/key}
