@@ -2,6 +2,7 @@
 	import Pill from '$lib/components/Pill.svelte';
 	import TagsSvg from '$lib/components/TagsSVG.svelte';
 	import { marked } from 'marked';
+	import { formatTag } from '$lib/assets/js/utils';
 
 	export let url = '';
 	export let name = '';
@@ -16,6 +17,7 @@
 	export let taglist;
 
 	tags.sort(); // sort alphabetically
+	tags = tags.map(formatTag);
 	let show = true; // helper to toggle visibility
 
 	// reactively toggle visibility
