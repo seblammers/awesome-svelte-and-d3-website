@@ -4,12 +4,14 @@ form {
   }
   
   button,
+  .button-standard,
   input[type=submit] {
     font-size: var(--step-1);
     padding: var(--space-s) var(--space-l);
     background: var(--dark);
     color: var(--surface0-light);
     font-weight: bold;
+    text-decoration: none;
     border: 2px solid var(--dark);
     border-radius: var(--radius);
     margin: var(--space-s) 0 var(--space-s);

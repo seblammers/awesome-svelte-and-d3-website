@@ -59,9 +59,7 @@
 			{/each}
 		</div>
 
-		<button class="align-right">
-			<a href="/projects"> Show all projects </a>
-		</button>
+		<a class="button-standard align-right" href="/projects"> Show all projects </a>
 	{/if}
 </section>
 
