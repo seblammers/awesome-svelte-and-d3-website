@@ -18,7 +18,7 @@
 	</div>
 	<div class="form-section">
 		<label for="message">Message</label>
-		<textarea name="message" id="message" required placeholder="Your Message" rows="8" cols="65" />
+		<textarea name="message" id="message" required placeholder="Your Message" rows="8" cols="95" />
 	</div>
 
 	<input type="submit" value="Submit" class="align-right" />
