@@ -33,6 +33,9 @@ main {
 	grid-template-columns: 100%;
 	grid-template-rows: auto 1fr auto;
 	min-height: 100vh;
+	--flow-space: var(--space-l);
+
+
 }
 
 img {
@@ -201,3 +204,7 @@ aside > ul {
 	// allow less space for these buttons
 	--min: 20ch;
 }
+
+.align-right {
+    float: right;
+  }

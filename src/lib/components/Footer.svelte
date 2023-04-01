@@ -1,5 +1,18 @@
-<footer>
-	<p>Made with &#10084; in Germany and Brazil</p>
+<script>
+	let width;
+	$: mobile = width < 900;
+</script>
+
+<svelte:window bind:innerWidth={width} />
+
+<footer class:mobile>
+	<p>
+		&copy; {new Date().getFullYear()} Design & Code
+		<a href="https://www.sebastianlammers.com/" target="_blank" rel="noopener noreferrer"
+			>Sebastian Lammers</a
+		>
+	</p>
+	<img src="/favicon.svg" alt="Svelte and D3 logos placed over a heart" />
 	<p
 		class="scroll-to-top"
 		on:click={() => {
@@ -23,7 +36,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		align-items: baseline;
+		align-items: center;
 		padding: var(--space-m) var(--space-m);
 		width: 100%;
 
@@ -38,5 +51,19 @@
 
 	.scroll-to-top {
 		cursor: pointer;
+	}
+
+	img {
+		max-width: var(--space-l);
+		padding: 0;
+	}
+	.mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		& > * {
+			margin: var(--space-xs);
+		}
 	}
 </style>
