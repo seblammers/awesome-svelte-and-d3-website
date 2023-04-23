@@ -26,7 +26,9 @@
 <style lang="scss">
 	.tag {
 		position: relative;
-		background-color: var(--surface0-light);
+		background-color: var(--surface2-light);
+		border-color: var(--surface2-light);
+		color: var(--surface0-light);
 		font-weight: 400;
 
 		&:hover {

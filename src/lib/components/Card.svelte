@@ -1,6 +1,5 @@
 <script>
 	import Pill from '$lib/components/Pill.svelte';
-	import TagsSvg from '$lib/components/TagsSVG.svelte';
 	import { marked } from 'marked';
 	import { formatTag } from '$lib/assets/js/utils';
 
@@ -55,7 +54,6 @@
 			{#each tags as tag}
 				<Pill on:addTag {tag} {taglist} />
 			{/each}
-			<TagsSvg />
 		</div>
 	</article>
 {/if}
