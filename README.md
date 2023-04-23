@@ -1,8 +1,8 @@
 # hello world
 
-this will be the home of the code for the *aweseome svelte & d3 website* :heart:
+Here you can find the frontend (messy) code for the *Aweseome Svelte & D3 website* :heart:
 
-## preview
+Feel free to sniff around or even tell me about how to improve.
 
-find the current version at:
+Find the current version at:
 https://awesome-svelte-and-d3.netlify.app/
