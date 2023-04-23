@@ -14,9 +14,10 @@
 					authors
 					slug
 					description
-					tags
+					dropdownTags
 					demo
 					sourceCode
+					featured
 					image {
 						url(transformation: { image: { resize: { width: 800, height: 800, fit: crop } } })
 					}
@@ -34,7 +35,7 @@
 	<h1>Welcome to Awesome Svelte & D3</h1>
 
 	<h2>In the wild</h2>
-	<p>Here are the three most recent projects:</p>
+	<p>Here are our three featured projects:</p>
 </section>
 
 <section>
@@ -44,7 +45,7 @@
 		<p>Oopsie! {$projectsQueryStore.error.message}</p>
 	{:else}
 		<div class="u-grid">
-			{#each $projectsQueryStore.data.projects.slice(0, 3) as p}
+			{#each $projectsQueryStore.data.projects.filter((x) => x.featured) as p}
 				<ProjectCard
 					name={p.name}
 					authors={p.authors}
@@ -53,7 +54,7 @@
 					slug={p.slug}
 					demo={p.demo}
 					sourceCode={p.sourceCode}
-					tags={p.tags}
+					tags={p.dropdownTags}
 					{taglist}
 				/>
 			{/each}
