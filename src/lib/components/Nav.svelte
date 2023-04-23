@@ -1,4 +1,5 @@
 <script>
+	import Logo from '$lib/assets/svg/Logo.svelte';
 	import { navItems } from '$lib/config';
 	import { slide, fade, fly } from 'svelte/transition';
 	import { beforeNavigate } from '$app/navigation';
@@ -30,7 +31,7 @@
 		<div class="nav-fh">
 			<a href="/">
 				<div class="logo">
-					<img src="/favicon.svg" alt="Svelte and D3 logos placed over a heart" />
+					<Logo />
 				</div>
 			</a>
 			<div class="hamburger">
