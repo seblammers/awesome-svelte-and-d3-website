@@ -5,6 +5,7 @@
 	export let data;
 	let taglist = [];
 
+	let showTags = false;
 	const projectsQueryStore = queryStore({
 		client: getContextClient(),
 		query: gql`
@@ -53,10 +54,21 @@
 
 <section>
 	<h1>Welcome to Awesome Svelte & D3</h1>
+	<h3>What's this?</h3>
+	<p>
+		Here you will find awesome data visualization projects that were created with Svelte and D3.
+	</p>
+	<p>
+		Check out the <a href="/projects">Projects</a> and dive into the code to learn how it works.
+	</p>
 
-	<h2>In the wild</h2>
-	<p />
-	<p>Here are our three featured projects:</p>
+	<h3>Start learning!</h3>
+	<p>
+		If you want to learn more about how to create such projects with Svelte and D3, check out the
+		selected <a href="/learning">Learning</a> resources.
+	</p>
+
+	<h2>Projects in the wild</h2>
 
 	{#if $projectsQueryStore.fetching}
 		<p>Loading...</p>
@@ -75,6 +87,7 @@
 					sourceCode={p.sourceCode}
 					tags={p.dropdownTags}
 					{taglist}
+					{showTags}
 				/>
 			{/each}
 		</div>
@@ -87,8 +100,7 @@
 <br />
 
 <section>
-	<h2>Tutorials</h2>
-	<p>Here are our three featured tutorials:</p>
+	<h2>Tutorials (Text or Video)</h2>
 
 	{#if $tutorialsQueryStore.fetching}
 		<p>Loading...</p>
@@ -107,6 +119,7 @@
 					type={p.type}
 					tags={p.dropdownTags}
 					{taglist}
+					{showTags}
 				/>
 			{/each}
 		</div>

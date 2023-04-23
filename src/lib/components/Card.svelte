@@ -15,6 +15,7 @@
 	export let sourceCode = '';
 	export let tags = '';
 	export let taglist;
+	export let showTags = true;
 
 	tags.sort(); // sort alphabetically
 	tags = tags.map(formatTag);
@@ -53,11 +54,13 @@
 			{/if}
 		</div>
 
-		<div class="tags flow">
-			{#each tags as tag}
-				<Pill on:addTag {tag} {taglist} />
-			{/each}
-		</div>
+		{#if showTags}
+			<div class="tags flow">
+				{#each tags as tag}
+					<Pill on:addTag {tag} {taglist} />
+				{/each}
+			</div>
+		{/if}
 	</article>
 {/if}
 
