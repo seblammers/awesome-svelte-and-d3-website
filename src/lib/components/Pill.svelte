@@ -41,6 +41,7 @@
 	}
 	.active {
 		background-color: var(--awesome-red);
+		border-color: var(--awesome-red);
 		color: var(--text1-dark);
 
 		&:hover {
