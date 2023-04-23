@@ -20,7 +20,11 @@
 </script>
 
 <button class:active class="pill tag" on:click={addTag} {tag}>
-	{tag}
+	{#if active}
+		<span>{tag}&#215;</span>
+	{:else}
+		<span>{tag}</span>
+	{/if}
 </button>
 
 <style lang="scss">
