@@ -8,16 +8,18 @@
 
 <footer class:mobile>
 	<p>
-		&copy; {new Date().getFullYear()} Design & Code
+		&copy; {new Date().getFullYear()} Design & Development
+	</p>
+	<p class="no-top">
 		<a href="https://www.sebastianlammers.com/" target="_blank" rel="noopener noreferrer"
 			>Sebastian Lammers</a
 		>
 	</p>
 	<Logo
 		fillHeart="var(--text1-dark)"
-		strokeHeart="var(--text1-dark)"
+		strokeHeart="var(--surface3-light)"
 		fill="var(--text1-dark)"
-		stroke="var(--surface3-light"
+		stroke="var(--surface3-light)"
 	/>
 	<p
 		class="scroll-to-top"
@@ -34,6 +36,9 @@
 </footer>
 
 <style lang="scss">
+	.no-top {
+		margin-top: 0;
+	}
 	footer {
 		font-family: var(--accentFont);
 		font-weight: 300;
@@ -66,6 +71,9 @@
 		justify-content: space-around;
 		& > * {
 			margin: var(--space-xs);
+		}
+		& > .no-top {
+			margin-top: 0;
 		}
 	}
 </style>
