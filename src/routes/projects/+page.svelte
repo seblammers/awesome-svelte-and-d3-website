@@ -73,7 +73,14 @@
 	<title>Awesome Svelte & D3 | Projects</title>
 </svelte:head>
 
-<h2>Projects in the wild</h2>
+<section class="flow">
+	<h2>Projects in the wild</h2>
+
+	<p>
+		Dive into <strong>real world projects</strong> that use Svelte and D3 under the hood.
+	</p>
+	<p>Find a pattern or a component that fascinates you? Dig into the code to learn more!</p>
+</section>
 
 <Accordion summary="Filter Projects {n_tags}">
 	<h4>Use tags to filter out specific projects:</h4>

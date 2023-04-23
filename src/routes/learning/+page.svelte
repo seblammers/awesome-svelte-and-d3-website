@@ -77,14 +77,29 @@
 	<title>Awesome Svelte & D3 | Learning</title>
 </svelte:head>
 
-<h2>Learning resources</h2>
+<section class="flow">
+	<h2>Learning resources</h2>
 
-<Accordion summary="Filter Projects {n_tags}">
-	<h4>Use tags to filter out specific tutorials:</h4>
-	<p class="instruction">
-		You can either start typing and use autocomplete or click on the tags within each Project-Card
-		below.
+	<p>
+		Check out these selected learning resources to start your journey into the world of <strong
+			>interactive data visualization</strong
+		> for the web with Svelte and D3.
 	</p>
+	<p>
+		If you already have some experience, maybe you will find sth. to add to your tool-belt? Ever
+		created a map? A scrollytelling project? Dive into it below!
+	</p>
+</section>
+
+<Accordion summary="Filter Tutorials {n_tags}">
+	<h4>Use tags to filter out specific tutorials:</h4>
+	<div class="instruction">
+		<p>
+			You can either start typing and use autocomplete or click on the tags within each Project-Card
+			below.
+		</p>
+		<p>Use <em>text</em> and <em>video</em> tags to filter for written vs. video content.</p>
+	</div>
 
 	<div class="tag-wrapper">
 		<Tags

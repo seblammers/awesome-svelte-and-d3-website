@@ -56,7 +56,9 @@
 	<h1>Welcome to Awesome Svelte & D3</h1>
 	<h3>What's this?</h3>
 	<p>
-		Here you will find awesome data visualization projects that were created with Svelte and D3.
+		Here you will find awesome data visualization projects that were created with <strong
+			>Svelte & D3</strong
+		>.
 	</p>
 	<p>
 		Check out the <a href="/projects">Projects</a> and dive into the code to learn how it works.

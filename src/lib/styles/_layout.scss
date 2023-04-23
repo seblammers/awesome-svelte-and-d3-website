@@ -200,3 +200,7 @@ aside > ul {
 .align-right {
     float: right;
   }
+
+section {
+	--flow-space: var(--space-xs);
+}
