@@ -1,6 +1,7 @@
 <script>
 	import '@fontsource/clear-sans';
 	import '$lib/styles/global.scss';
+	import Meta from '$lib/components/Meta.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { createClient, setContextClient } from '@urql/svelte';
@@ -13,6 +14,8 @@
 
 	export let data;
 </script>
+
+<Meta />
 
 <div class="layout">
 	<Nav />
