@@ -93,12 +93,6 @@ aside > ul {
 	text-decoration: none;
 	text-transform: lowercase;
 
-	&:hover {
-		background-color: var(--awesome-red);
-		border-color: var(--awesome-red);
-		color: var(--text1-dark);
-		cursor: pointer;
-	}
 }
 
 .button {
@@ -118,9 +112,8 @@ aside > ul {
 
 	// Make sure hover state trumps all variants
 	&:hover {
-		background-color: var(--awesome-red) !important;
+		background-color: var(--surface1-dark) !important;
 		color: var(--text1-dark) !important;
-		border-color: var(--awesome-red);
 	}
 }
 
@@ -170,7 +163,6 @@ aside > ul {
 
 	.tags {
 		position: relative;
-		
 		border-radius: var(--radius);
 		border: var(--radius-card) solid var(surface1-light);
 		--flowspace: var(--space-xl);

@@ -32,11 +32,11 @@
 		font-weight: 400;
 
 		&:hover {
-			background-color: var(--awesome-red);
+			background-color: var(--surface1-dark);
 		}
 	}
 	.active {
-		background-color: var(--surface1-dark);
+		background-color: var(--awesome-red);
 		color: var(--text1-dark);
 
 		&:hover {
