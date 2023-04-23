@@ -1,5 +1,6 @@
 <script>
 	let width;
+	import Logo from '$lib/assets/svg/Logo.svelte';
 	$: mobile = width < 900;
 </script>
 
@@ -12,7 +13,12 @@
 			>Sebastian Lammers</a
 		>
 	</p>
-	<img src="/favicon.svg" alt="Svelte and D3 logos placed over a heart" />
+	<Logo
+		fillHeart="var(--text1-dark)"
+		strokeHeart="var(--text1-dark)"
+		fill="var(--text1-dark)"
+		stroke="var(--surface3-light"
+	/>
 	<p
 		class="scroll-to-top"
 		on:click={() => {
@@ -34,6 +40,7 @@
 		background: var(--surface1-dark);
 		color: var(--text1-dark);
 		display: flex;
+		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: center;
@@ -44,18 +51,13 @@
 			flex: 0 1 auto;
 		}
 		p {
-			margin: 0;
+			margin: var(--space-s);
 			font-size: var(--step-0);
 		}
 	}
 
 	.scroll-to-top {
 		cursor: pointer;
-	}
-
-	img {
-		max-width: var(--space-l);
-		padding: 0;
 	}
 	.mobile {
 		display: flex;
