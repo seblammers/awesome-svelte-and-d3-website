@@ -37,6 +37,7 @@
 
 		&:hover {
 			background-color: var(--surface1-dark);
+			border-color: var(--surface1-dark);
 		}
 	}
 	.active {
