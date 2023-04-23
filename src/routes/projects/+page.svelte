@@ -139,6 +139,13 @@
 	.tag-wrapper :global(.svelte-tags-input-tag) {
 		font-family: inherit;
 		font-size: var(--step-0);
+		background-color: var(--awesome-red);
+		padding: var(--space-2xs);
+		border-radius: var(--radius);
+		// border: 1px solid var(--text2-light);
+		// color: var(--text2-light);
+		// font-size: var(--step-0);
+		line-height: 1;
 	}
 
 	.tag-wrapper :global(.svelte-tags-input-layout) {
