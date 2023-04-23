@@ -78,7 +78,8 @@
 <Accordion summary="Filter Projects {n_tags}">
 	<h4>Use tags to filter out specific projects:</h4>
 	<p class="instruction">
-		You can either start typing and use autocomplete or click on the tags within each Project-Card.
+		You can either start typing and use autocomplete or click on the tags within each Project-Card
+		below.
 	</p>
 
 	<div class="tag-wrapper">
