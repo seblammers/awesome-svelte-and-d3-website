@@ -11,6 +11,7 @@
 	export let alt = ''; // TODO add alt text for images
 	export let description = '';
 	export let demo = '';
+	export let type = '';
 	export let sourceCode = '';
 	export let tags = '';
 	export let taglist;
@@ -45,9 +46,11 @@
 
 		<div class="details grid flow">
 			<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
-			<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
-				>Source Code &nearr;
-			</a>
+			{#if sourceCode !== ''}
+				<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
+					>Source Code &nearr;
+				</a>
+			{/if}
 		</div>
 
 		<div class="tags flow">
