@@ -134,29 +134,29 @@
 	}
 
 	// the following had to be added in this manner to override the styles of the
-	// svelte-tags-input component
+	// svelte-tags-input component (how to solve this?)
 	.tag-wrapper :global(.svelte-tags-input) {
-		font-family: inherit;
-		font-size: var(--step-0);
+		font-family: inherit !important;
+		font-size: var(--step-0) !important;
 	}
 
 	.tag-wrapper :global(.svelte-tags-input-matchs) {
-		font-family: inherit;
-		font-size: var(--step-0);
+		font-family: inherit !important;
+		font-size: var(--step-0) !important;
 	}
 	.tag-wrapper :global(.svelte-tags-input-tag) {
-		font-family: inherit;
-		font-size: var(--step-0);
-		background-color: var(--awesome-red);
-		padding: var(--space-2xs);
-		border-radius: var(--radius);
+		font-family: inherit !important;
+		font-size: var(--step-0) !important;
+		background-color: var(--awesome-red) !important;
+		padding: var(--space-2xs) !important;
+		border-radius: var(--radius) !important;
 		// border: 1px solid var(--text2-light);
 		// color: var(--text2-light);
 		// font-size: var(--step-0);
-		line-height: 1;
+		line-height: 1 !important;
 	}
 
 	.tag-wrapper :global(.svelte-tags-input-layout) {
-		font-family: inherit;
+		font-family: inherit !important;
 	}
 </style>
