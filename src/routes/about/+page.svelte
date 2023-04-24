@@ -39,10 +39,18 @@
 	<h2>How this site is built</h2>
 	<p>This site is developed with <a href="https://kit.svelte.dev/">SvelteKit</a>.</p>
 	<p>The content is pulled in from a <a href="https://hygraph.com/">Hygraph CMS</a> project.</p>
-	<p>The font used is <a href="https://github.com/intel/clear-sans">Clear Sans</a>.</p>
+	<p>
+		Responsive fluid type, space, and grid implemented with <a href="https://utopia.fyi/">Utopia</a
+		>.
+	</p>
+	<p>The font used throughout is <a href="https://github.com/intel/clear-sans">Clear Sans</a>.</p>
 	<p>
 		The code for this site is <a href="https://github.com/seblammers/awesome-svelte-and-d3-website"
 			>public here</a
 		>.
+	</p>
+	<p>
+		Last but not least, a <strong>big thank you to Leandro Collares</strong> for giving feedback on design
+		and reviewing code!
 	</p>
 </section>
