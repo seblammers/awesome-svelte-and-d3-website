@@ -50,6 +50,7 @@
 
 <svelte:head>
 	<title>Awesome Svelte & D3 | Home</title>
+	<a rel="me" href="https://vis.social/@seblammers" />
 </svelte:head>
 
 <section>
