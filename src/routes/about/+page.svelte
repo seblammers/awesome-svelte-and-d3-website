@@ -9,28 +9,22 @@
 
 <section class="flow">
 	<h2>About this site</h2>
-	<p>Interactive data visualization for the web is <strong>fascinating</strong>.</p>
-	<p>But let's be honest, it's a hard thing to learn, too.</p>
 	<p>
-		<strong>D3</strong> has been <strong>the gold standard</strong> library to create bespoke data visualization
-		for over 10 years. But it can be overwhelming.
+		Interactive data visualization for the web is <strong>fascinating</strong>. But let's be honest,
+		it's a challenging thing to learn, too.
 	</p>
 	<p>
+		<strong>D3</strong> has been <strong>the gold standard</strong> library to create bespoke data
+		visualization for over 10 years. But it can be overwhelming.
 		<strong>Svelte</strong> has changed the game with it's <strong>beginner-friendly syntax</strong>
-		and built-in convenience functions for e.g. visual transitions.
+		and built-in convenience functions for e.g. visual transitions. Since a few years now, more and more
+		dataviz-professionals pivot to a combination of <strong>Svelte & D3</strong>.
 	</p>
 	<p>
-		Since a few years now, more and more dataviz-professionals pivot to a combination of <strong
-			>Svelte & D3</strong
-		>.
-	</p>
-	<p>
-		<strong>This site</strong> aims to collect stunning examples of data-driven visuals that were created
-		with this tool combination.
-	</p>
-	<p>
-		The focus lies on the <strong>learning experience</strong> that comes from looking at other
-		people's code. That's why only projects are showcased that also
+		<strong>This site</strong> aims to collect stunning examples of data-driven visuals that were
+		created with this <strong>tool combination</strong>. The focus lies on the
+		<strong>learning experience</strong>
+		that comes from looking at other people's code. That's why only projects are showcased that also
 		<strong>share their code publicly</strong>.
 	</p>
 	<p>
