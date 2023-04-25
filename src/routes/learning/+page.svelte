@@ -86,8 +86,8 @@
 		> for the web with Svelte and D3.
 	</p>
 	<p>
-		If you already have some experience, maybe you will find sth. to add to your tool-belt? Ever
-		created a map? A scrollytelling project? Dive into it below!
+		If you already have some experience, maybe you will find something to add to your tool belt?
+		Ever created a map? A scrollytelling project? Dive into it below!
 	</p>
 </section>
 

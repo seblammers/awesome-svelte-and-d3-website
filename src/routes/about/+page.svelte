@@ -15,8 +15,8 @@
 	</p>
 	<p>
 		<strong>D3</strong> has been <strong>the gold standard</strong> library to create bespoke data
-		visualization for over 10 years. But it can be overwhelming.
-		<strong>Svelte</strong> has changed the game with it's <strong>beginner-friendly syntax</strong>
+		visualizations for over 10 years. But it can be overwhelming.
+		<strong>Svelte</strong> has changed the game with its <strong>beginner-friendly syntax</strong>
 		and built-in convenience functions for e.g. visual transitions. Since a few years now, more and more
 		dataviz-professionals pivot to a combination of <strong>Svelte & D3</strong>.
 	</p>
@@ -29,8 +29,8 @@
 	</p>
 	<p>
 		In addition, some great tutorials, both in written form and in video format, are collected on
-		this site to start your journey into the world of <strong>Svelte & D3</strong> or move deeper into
-		a specific rabbit hole.
+		this site to help you start your <strong>Svelte & D3 learning journey</strong> or up your
+		<strong>data visualization</strong> game.
 	</p>
 	<p><strong>Enjoy!</strong></p>
 </section>
@@ -45,12 +45,13 @@
 	</p>
 	<p>The font used throughout is <a href="https://github.com/intel/clear-sans">Clear Sans</a>.</p>
 	<p>
-		The code for this site is <a href="https://github.com/seblammers/awesome-svelte-and-d3-website"
-			>public here</a
+		The source code for this site is <a
+			href="https://github.com/seblammers/awesome-svelte-and-d3-website">public here</a
 		>.
 	</p>
 	<p>
-		Last but not least, a <strong>big thank you to Leandro Collares</strong> for giving feedback on design
-		and reviewing code!
+		Last but not least, a <strong>big thank you</strong> to
+		<a href="https://leandrocollares.netlify.app/">Leandro Collares</a> for giving detail-oriented feedback
+		on design and reviewing code!
 	</p>
 </section>

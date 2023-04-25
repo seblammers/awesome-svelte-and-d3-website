@@ -79,7 +79,7 @@
 	<p>
 		Dive into <strong>real world projects</strong> that use Svelte and D3 under the hood.
 	</p>
-	<p>Find a pattern or a component that fascinates you? Dig into the code to learn more!</p>
+	<p>Found a pattern or a component that fascinates you? Dig into the code to learn more!</p>
 </section>
 
 <Accordion summary="Filter Projects {n_tags}">
