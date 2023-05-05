@@ -10,7 +10,7 @@
 		client: getContextClient(),
 		query: gql`
 			{
-				tutorials {
+				tutorials(orderBy: createdAt_DESC) {
 					name
 					authors
 					slug

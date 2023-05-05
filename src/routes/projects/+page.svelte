@@ -8,7 +8,7 @@
 		client: getContextClient(),
 		query: gql`
 			{
-				projects {
+				projects(orderBy: createdAt_DESC) {
 					name
 					authors
 					slug
