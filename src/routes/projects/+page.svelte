@@ -8,9 +8,10 @@
 		client: getContextClient(),
 		query: gql`
 			{
-				projects(orderBy: createdAt_DESC) {
+				projects(orderBy: lastCommit_DESC) {
 					name
 					authors
+					lastCommit
 					slug
 					description
 					dropdownTags
@@ -24,6 +25,7 @@
 		`
 	});
 
+	//$: console.log($projectsQueryStore.data.projects);
 	// start with empty taglist
 	// this is where tags will be added
 	let taglist = [];
