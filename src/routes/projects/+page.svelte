@@ -55,6 +55,12 @@
 	// WIP: a list of all (?) tags
 	// used for autocomplete!
 	let tags_unique = [
+		'heatmap',
+		//"violin",
+		//"lollipop",
+		//"diverging",
+		//"donut",
+		'illustration',
 		'machine learning',
 		'scrollytelling',
 		'scatter',
@@ -65,9 +71,13 @@
 		'sankey',
 		'statistics',
 		'interactive',
-		'food',
 		'histogram',
-		'webGL'
+		'webGL',
+		//"text",
+		//"video",
+		//"stacked",
+		'column',
+		'radial'
 	];
 </script>
 
