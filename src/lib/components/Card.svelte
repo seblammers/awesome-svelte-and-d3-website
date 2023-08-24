@@ -46,7 +46,12 @@
 		<p class="description">{@html marked(description)}</p>
 
 		<div class="details grid flow">
-			<a class="button" target="_blank" rel="noopener noreferrer" href={demo}>Live Site &nearr;</a>
+			{#if demo !== ''}
+				<a class="button" target="_blank" rel="noopener noreferrer" href={demo}
+					>Live Site &nearr;
+				</a>
+			{/if}
+			
 			{#if sourceCode !== ''}
 				<a class="button" target="_blank" rel="noopener noreferrer" href={sourceCode}
 					>Source Code &nearr;
