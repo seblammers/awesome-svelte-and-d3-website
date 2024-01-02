@@ -8,7 +8,7 @@
 
 <footer class:mobile>
 	<p>
-		&copy; {new Date().getFullYear()} Design & Development
+		&copy; 2023-{new Date().getFullYear()} Design & Development
 	</p>
 	<p class="no-top">
 		<a href="https://www.sebastianlammers.com/" target="_blank" rel="noopener noreferrer"
