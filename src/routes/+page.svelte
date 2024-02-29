@@ -10,7 +10,7 @@
 		client: getContextClient(),
 		query: gql`
 			{
-				projects {
+				projects(orderBy: lastCommit_DESC) {
 					name
 					authors
 					slug
